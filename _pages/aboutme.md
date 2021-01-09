@@ -2,7 +2,7 @@
 title: "About Me"
 permalink: /about-me/
 header:
-  image: "/images/cover.jpg"
+  image: "/images/aboutme.jpg"
 ---
 
  Currently studyng in Master in Data Science.
