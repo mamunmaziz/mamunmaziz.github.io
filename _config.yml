@@ -116,10 +116,14 @@ author:
   contact          : "+614694256065"
   github           : "mamunmaziz"
   linkedin         : "mamunmaziz"
+  twitter          : "mamunmaziz"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       # url: mamunmaziz@gmail.com
+    - label: "Contact"
+      icon: "fas fa-fw fa-envelope-square"
+      # url:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
