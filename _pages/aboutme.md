@@ -5,7 +5,8 @@ header:
   image: "/images/aboutme.jpg"
 ---
 
- Currently studyng in Master in Data Science.
+ Currently Studying  in Master of Data Science.
+ Complted Graduate Certificate in Master of Data Science
 
 
 
