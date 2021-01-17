@@ -105,6 +105,8 @@ The total crashes declined gradually in recent years for almost every month. Als
 ```r
 title: "Comparison of the change of Crashes between last 2 decades"
 ```
+The side-by-side bar chart was plotted where each bar represents the percentage change of road crashes from year 2001 to year 2018 and another bar represents the same for year 2011 to 2018. The bars are divided for each type of severity. Year 2001 to 2010 is a full decade and year 2011 to 2018 is considered another decade (approximately).
+
 ```r
 
 wide_crash <- yearwise_crash %>% 
@@ -119,12 +121,15 @@ percentage_crash_change <- wide_crash1 %>%
    summarise(year2001_crash=max(year2001),year2010_crash=max(year2010),
      year2011_crash=max(year2011),year2018_crash=max(year2018))%>%
     mutate(change_2001to2010=percentage_change(x=year2001_crash,y=year2010_crash), 
-     change_2011to2018=percentage_change(x=year2011_crash,y=year2018_crash))  # Percentage increase
+     change_2011to2018=percentage_change(x=year2011_crash,y=year2018_crash))  
+     
+cor(percentage_crash_change$change_2001to2010,
+    percentage_crash_change$change_2011to2018,method = "pearson")
+cor(percentage_crash_change$change_2001to2010,
+    percentage_crash_change$change_2011to2018,method = "spearman")
 
-cor(percentage_crash_change$change_2001to2010,percentage_crash_change$change_2011to2018,method = "pearson")
-cor(percentage_crash_change$change_2001to2010,percentage_crash_change$change_2011to2018,method = "spearman")
-
-crash_mat <- melt(percentage_crash_change, measure.vars = c("change_2001to2010","change_2011to2018"))
+crash_mat <- melt(percentage_crash_change, 
+          measure.vars = c("change_2001to2010","change_2011to2018"))
 ggplot(crash_mat, aes(x=Crash_Severity, y=value, fill=variable)) + 
   geom_bar( position = "dodge",stat = "identity")+
   theme_wsj()+
@@ -138,3 +143,8 @@ ggplot(crash_mat, aes(x=Crash_Severity, y=value, fill=variable)) +
 [1] 1
 ```
  <img src="/images/2021-01-17/R1_3.jpeg" width="912"/>
+
+### Results
+Only in case of hospitalized casualties, crashes increased for both the decades even though for recent decades it increased very less than previous one. Also, medical treatment cases increased very slightly for recent decades. Except those, all other types of severities are reduced on both the decades. The correlation coefficient between the percentage changes of crashes of 2 decades is potive means there is a strong cprrelation exits on those changes.
+
+---
