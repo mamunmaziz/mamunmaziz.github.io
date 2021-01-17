@@ -43,7 +43,6 @@ install.packages("ggplot2")
 install.packages("ggalt")
 install.packages("gridExtra")
 install.packages("ggthemes") 
-library(ggthemes) 
 ```
 #### Loading
 ```r
