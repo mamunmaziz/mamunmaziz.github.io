@@ -189,3 +189,52 @@ cor(yearwise_crash$Total_Crash,yearwise_crash$Crash_Year,method = "spearman")
 #### Results
 The pattern of volume of road crashes declines from 2001 to 2018 gradually with an almost linear relation.  Also, the boxplot for total crashes by crash year in tells that the median line is closer to top quartile(Q3) which also proves that the relation is negatively skewed (Wickham & Grolemund, 2017). Aslo, From the perason coorelation test, the achived value, -0.07162187, is a negative value which proves that the variables are negatively correlated (Benjamin S. et all., 2017). This study cleary shows, even though there is a linear relation presents, that after year 2015 the total crashes were increased again.
 
+---
+
+#### Analysis 5
+```r
+title:"Relations of speed, drink, fatigue and defects 
+                       of vehicles with road crashess"
+```
+```r
+factors<- read.csv(file="factorsinroadcrashes.csv", header = TRUE, 
+                   dec = ".") 
+factors2 <- factors%>%
+  filter(Crash_Severity!="Property damage only")%>%
+   group_by(Crash_Year,Involving_Driver_Speed,Involving_Drink_Driving,Involving_Fatigued_Driver,Involving_Defective_Vehicle)%>%
+     summarise(Total_Crash=sum(Count_Crashes))
+
+
+proportion_freq <- function(x) (x/sum(x)*100)   #FUNCTION
+
+factors3 <- factors2%>% 
+  group_by(Crash_Year)%>%
+ transform(propo_crash=proportion_freq(Total_Crash))  # Variable Transformation
+str(factors3)
+
+p1 <- ggplot(factors3, aes(fill=Involving_Driver_Speed, y=propo_crash, x=Crash_Year)) + 
+  geom_bar(stat="identity")+scale_fill_manual(values=c("#66CC99","#0072B2"))+
+  theme_wsj()+
+  ggtitle("Crash Related to Speed")   # Speed
+
+p2 <- ggplot(factors3, aes(fill=Involving_Drink_Driving, y=propo_crash, x=Crash_Year)) + 
+  geom_bar(stat="identity")+scale_fill_manual(values=c("#66CC99","#0072B2"))+  #DRINK
+  theme_wsj()+
+  ggtitle("Crash Related to Drink")
+
+p3 <- ggplot(factors3, aes(fill=Involving_Fatigued_Driver, y=propo_crash, x=Crash_Year)) + 
+  geom_bar(stat="identity")+scale_fill_manual(values=c("#66CC99","#0072B2")) +  #Fatig
+  theme_wsj()+
+  ggtitle("Crash Related to Fatig")
+
+p4 <- ggplot(factors3, aes(fill=Involving_Defective_Vehicle, y=propo_crash, x=Crash_Year)) + 
+  geom_bar( stat="identity")+scale_fill_manual(values=c("#66CC99","#0072B2" ))+   #Defect
+  theme_wsj()+
+  ggtitle("Crash Related to Defect")
+
+grid.arrange(p1,p2,p3,p4, nrow=2)
+```
+20mg src="/images/2021-01-17/R1_6.jpeg" width="920>
+
+#### Results
+The 4 stacked bar plots above show, in comparison with total crash, that the proportion of crash occurred due to over speeding, drinking alcohol, having fatigue while driving and defective vehicles is very less and the pattern remains almost similar for whole 18 years.
