@@ -114,7 +114,8 @@ wide_crash <- yearwise_crash %>%
        
 wide_crash1 <- wide_crash%>%
    select ( 1,2,11,12,19 )%>%    # subset selection
-          rename(year2001=names(.)[2],year2010=names(.)[3],year2011= names(.)[4], year2018=names(.)[5])percentage_change <- function(x,y) ((y-x)*100/x)
+          rename(year2001=names(.)[2],year2010=names(.)[3],year2011= names(.)[4], 
+          year2018=names(.)[5])percentage_change <- function(x,y) ((y-x)*100/x)
 
 percentage_crash_change <- wide_crash1 %>%
   group_by(Crash_Severity)%>%
@@ -144,7 +145,7 @@ ggplot(crash_mat, aes(x=Crash_Severity, y=value, fill=variable)) +
 ```
  <img src="/images/2021-01-17/R1_3.jpeg" width="912"/>
 
-### Results
+#### Results
 Only in case of hospitalized casualties, crashes increased for both the decades even though for recent decades it increased very less than previous one. Also, medical treatment cases increased very slightly for recent decades. Except those, all other types of severities are reduced on both the decades. The correlation coefficient between the percentage changes of crashes of 2 decades is potive means there is a strong cprrelation exits on those changes.
 
 ---
