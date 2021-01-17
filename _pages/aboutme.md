@@ -5,18 +5,21 @@ header:
   image: "/images/aboutme.jpg"
 ---
 
- Currently Studying  in Master of Data Science.
- Complted Graduate Certificate in Master of Data Science
+ ## Key Skills
+
+* Experience in various telecom switches and transmissions related database analysis and meaningful representations of them.
+*	Hands-on experience on planning, designing, budgeting, database updating and data analyzing and deliver of Multi technology Outside Plant network (both Fiber and Copper) 
+* Having excellent experience and understanding of SpatialNET (Australian Telecommunication network’s visual database) in depth 
+*	Having Knowledge of geographic information systems and network databases and MapInfo
+* Experience on working closely with MYSQL database and various query related issues.
+* Experience on working with R language for academic project and accomplished free lance data ETR and visualization 
+*	Experience working with simple visualization with both Power BI  and Tubule
+* Currently Studying  in Master of Data Science.
+* Complted Graduate Certificate in Master of Data Science
 
 
-
-## My Skills
-
-
-
-
-
-### Data Science, Python and SQL 
+## Technical know-how realated to data science
+### R, Python and SQL scripting 
 
 | Data Science                                                                                  | Level                  | Years of Expertise               |
 | --------------------------------------------------------------------------------------------- |:----------------------:| --------------------------------:|
