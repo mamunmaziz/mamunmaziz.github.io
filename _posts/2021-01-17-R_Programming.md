@@ -252,7 +252,10 @@ drivers<- read.csv(file="driverdemographics.csv", header = TRUE,
 
 deivers2 <- drivers%>%
   filter(Crash_Severity!="Property damage only")%>%
-  group_by(Crash_Year,Involving_Male_Driver,Involving_Female_Driver,Involving_Young_Driver_16_24,Involving_Senior_Driver_60plus, Involving_Provisional_Driver,Involving_Unlicensed_Driver)%>%
+  group_by(Crash_Year,Involving_Male_Driver,
+    Involving_Female_Driver,Involving_Young_Driver_16_24,
+    Involving_Senior_Driver_60plus, Involving_Provisional_Driver,
+    Involving_Unlicensed_Driver)%>%
   summarise(Total_Crash=sum(Count_Crashes))
 
 drivers3 <- deivers2%>% 
