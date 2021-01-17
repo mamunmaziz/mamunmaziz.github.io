@@ -5,7 +5,7 @@ header:
   image: "/images/aboutme.jpg"
 ---
 
- ## Key Skills
+### Key Skills
 
 * Experience in various telecom switches and transmissions related database analysis and meaningful representations of them.
 *	Hands-on experience on planning, designing, budgeting, database updating and data analyzing and deliver of Multi technology Outside Plant network (both Fiber and Copper) 
@@ -18,8 +18,8 @@ header:
 * Complted Graduate Certificate in Master of Data Science
 
 
-## Technical know-how realated to data science
-### R, Python and SQL scripting 
+### Technical know-how realated to data science
+#### R, Python and SQL scripting 
 
 | Data Science                                                                                  | Level                  | Years of Expertise               |
 | --------------------------------------------------------------------------------------------- |:----------------------:| --------------------------------:|
