@@ -298,7 +298,9 @@ grid.arrange(d1,d2,d3,d4,d5,d6, nrow=3)
 #### Results
 The 6 stacked bar plots  above shows that the proportion of road crashes in comparison with total crashes is much higher for male than female, around 35% of total crashes occurred by young (16-24) drivers, the crashes occurred by 60plus aged people is around 15% and that increased slightly in recent years, unlicensed drivers committed very few proportion of crashes and lastly  around 20% crashes occurred by the provisional drivers. A very significant scenario is that almost all the 6 factors has very steady pattern in all through the 18 years. The one of the most important implications from this last study is that the young drivers should be more careful while driving.
 
+----
 
 ## Conclusion
-There wre many more factors realted to crashes in the dataset which were not consuderd due to keep the analysis under a certain space, such as 'overseas driver', 'not restrain the seat belts' etc.
-Anyweay, in 2001 the population of Queensland was 3.67 million and in 2018 the population was 4.97 million (Australian Bureau of Statistics, 2020). Even though, along with the increased people and increased vehicles, the severity of road crashes actually relatively lessens much in recent years, which we can understand from this study. 
+There were many more factors related to crashes in the dataset which were not considered due to size of the projects, such as 'overseas driver', 'not restrain the seat belts' etc.
+Anyway, in 2001 the population of Queensland was 3.67 million and in 2018 the population was 4.97 million (Australian Bureau of Statistics, 2020). Even though, along with the increased people and increased vehicles, the severity of road crashes actually relatively lessens much in recent years, which we can understand from this study.
+
