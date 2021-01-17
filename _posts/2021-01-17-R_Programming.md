@@ -42,14 +42,17 @@ date: "10/11/2020"
 install.packages("ggplot2")
 install.packages("ggalt")
 install.packages("gridExtra")
+install.packages("ggthemes") 
+library(ggthemes) 
 ```
-#### Usage
+#### Loading
 ```r
 library(dplyr)
 library(ggplot2)
 library(tidyr)
 library(reshape2)
 library(gridExtra)
+library(ggthemes) 
 ```
 ```r
 locations<- read.csv(file="locations .csv", header = TRUE, 
