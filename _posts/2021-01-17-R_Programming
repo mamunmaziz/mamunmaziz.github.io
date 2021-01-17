@@ -9,7 +9,7 @@ mathjax: "true"
 ---
 
 
-As part of my Post Graduate University program of Data Science, I had to accomplished few data science projects using R programm.  Among those, one was   conducted with the data of Queensland’s Road Crash from year 2001 to year 2018. 
+As part of my Post Graduate University program of Data Science, I had to accomplished few data science projects using R programming language.  Among those, one was   conducted with the data of Queensland’s Road Crash from year 2001 to year 2018. 
 The purpose of the project was to 
 * find the changes of total crash per year by different severity and found any relation between them. 
 * achieve the change of pattern of crashes along the year. 
