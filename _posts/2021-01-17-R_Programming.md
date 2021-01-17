@@ -35,6 +35,7 @@ Those ‘Crash data from Queensland Roads’ was originally collected by Departm
 
 # Data Analysis 
 ---
+#### Analysis 1
 ```r
 title: "The changes of total crash per year by different severity"
 ```
@@ -79,6 +80,7 @@ ggplot( yearwise_crash, aes(x = Crash_Year,
 The fatality on road crashes, for last 18 years, remains almost equal; even though in recent years it reduces slightly, the hospitalized causalities increases over the last few years, the causalities required medical treatment are decreased in recent years than before and the causalities with minor injuries has a rapid change from 2007 to 2018  but  increases gradually in last three years. 
 
 ---
+#### Analysis 2
 ```r
 title: "Year wise total crashes acrros yeach month"
 ```
@@ -105,6 +107,7 @@ ggplot( yearwise_crash_month, aes(x = Crash_Year, y = Total_Crash, group = Crash
 The total crashes declined gradually in recent years for almost every month. Also, minumum number of crashes occuerd during the begginig of year and most crashes occured during mid of the year.
 
 ---
+#### Analysis 3
 ```r
 title:"Comparison of the change of Crashes between last 2 decades"
 ```
@@ -152,3 +155,37 @@ ggplot(crash_mat, aes(x=Crash_Severity, y=value, fill=variable)) +
 Only in case of hospitalized casualties, crashes increased for both the decades even though for recent decades it increased very less than previous one. Also, medical treatment cases increased very slightly for recent decades. Except those, all other types of severities are reduced on both the decades. The correlation coefficient between the percentage changes of crashes of 2 decades is potive means there is a strong cprrelation exits on those changes.
 
 ---
+#### Analysis 4
+```r
+title:'Visualization of Total Crash by Crash Years"
+```
+```r
+yearwise_crashsmooth <- yearwise_crash%>%
+    group_by(Crash_Year)%>%
+       summarise(Total_Crash=sum(Total_Crash))
+
+ggplot( yearwise_crashsmooth, aes(x = Crash_Year, y = Total_Crash)) + 
+   geom_point() +
+geom_smooth(method="lm",formula = y~x, size=1)+
+  theme_igray()+
+ggtitle("Total_Crash by Crash Years")
+
+ggplot(data = yearwise_crashsmooth, mapping = aes(y = Total_Crash, 
+                                x = Crash_Year, color=Crash_Year)) + 
+  geom_boxplot(fill= "#66CC99",colour = "black") +
+  theme_igray()+
+  ggtitle("boxplot of Total_Crash by Crash Years")
+
+cor(yearwise_crash$Total_Crash,yearwise_crash$Crash_Year,method = "spearman")
+```
+```r
+> cor(yearwise_crash$Total_Crash,yearwise_crash$Crash_Year,method = "spearman")
+[1] -0.07162187
+```
+<img src="/images/2021-01-17/R1_4.jpeg" width="912"/>
+
+<img src="/images/2021-01-17/R1_5.jpeg" width="912"/>
+
+#### Results
+The pattern of volume of road crashes declines from 2001 to 2018 gradually with an almost linear relation.  Also, the boxplot for total crashes by crash year in tells that the median line is closer to top quartile(Q3) which also proves that the relation is negatively skewed (Wickham & Grolemund, 2017). Aslo, From the perason coorelation test, the achived value, -0.06799649, is a negative value which proves that the variables are negatively correlated (Benjamin S. et all., 2017). This study cleary shows, even though there is a linear relation presents, that after year 2015 the total crashes were increased again.
+
