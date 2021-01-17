@@ -9,11 +9,12 @@ mathjax: "true"
 ---
 
 
-As part of my Post Graduate University program of Data Science, I had to accomplished few data science projects using R programming language.  Among those, one was   conducted with the data of Queensland’s Road Crash from year 2001 to year 2018. 
+As part of my Post Graduate University program of Data Science, I had to accomplished few data science projects using R programming language.  Among those, one was conducted with the Road Crash data of Australia's second largst state Queensland from year 2001 to year 2018. 
 The purpose of the project was to 
-* find the changes of total crash per year by different severity and found any relation between them. 
-* achieve the change of pattern of crashes along the year. 
-* compare the pattern of changes of road crashes for the decade 2001 to 2010 and same for year 2011 to 2018. 
+* find the changes of total crash per year by different severity and found any relation between them, 
+* achieve the change of pattern of crashes along the year, 
+* compare the pattern of changes of road crashes for the decade 2001 to 2010 and same for year 2011 to 2018,and 
+* compare the relations of factors related to carashes 
 
 The datasets were downloaded from [Queensland Road Crash Data](http://data.qld.gov.au/dataset/f3e0ca94-2d7b-44ee-abef-d6b06e9b0729) (Transport and Main Road, 2019).
 Those ‘Crash data from Queensland Roads’ was originally collected by Department of Transport and Main Road (TMR) and the authority collected it by observational study from recorded police reports. The crashes in this dataset are based on two basic criteria -(a)crashed occurred on public road and (b)at least a person was killed or injured.
@@ -218,23 +219,86 @@ p1 <- ggplot(factors3, aes(fill=Involving_Driver_Speed, y=propo_crash, x=Crash_Y
   ggtitle("Crash Related to Speed")   # Speed
 
 p2 <- ggplot(factors3, aes(fill=Involving_Drink_Driving, y=propo_crash, x=Crash_Year)) + 
-  geom_bar(stat="identity")+scale_fill_manual(values=c("#66CC99","#0072B2"))+  #DRINK
+  geom_bar(stat="identity")+scale_fill_manual(values=c("#66CC99","#0072B2"))+ 
   theme_wsj()+
-  ggtitle("Crash Related to Drink")
+  ggtitle("Crash Related to Drink")  #Drink
 
 p3 <- ggplot(factors3, aes(fill=Involving_Fatigued_Driver, y=propo_crash, x=Crash_Year)) + 
-  geom_bar(stat="identity")+scale_fill_manual(values=c("#66CC99","#0072B2")) +  #Fatig
+  geom_bar(stat="identity")+scale_fill_manual(values=c("#66CC99","#0072B2")) + 
   theme_wsj()+
-  ggtitle("Crash Related to Fatig")
+  ggtitle("Crash Related to Fatig")  #Fatig
 
 p4 <- ggplot(factors3, aes(fill=Involving_Defective_Vehicle, y=propo_crash, x=Crash_Year)) + 
-  geom_bar( stat="identity")+scale_fill_manual(values=c("#66CC99","#0072B2" ))+   #Defect
+  geom_bar( stat="identity")+scale_fill_manual(values=c("#66CC99","#0072B2" ))+  
   theme_wsj()+
-  ggtitle("Crash Related to Defect")
+  ggtitle("Crash Related to Defect")  #Defect
 
 grid.arrange(p1,p2,p3,p4, nrow=2)
 ```
-20mg src="/images/2021-01-17/R1_6.jpeg" width="920>
+<img src="/images/2021-01-17/R1_6.jpeg" width="920>
 
 #### Results
 The 4 stacked bar plots above show, in comparison with total crash, that the proportion of crash occurred due to over speeding, drinking alcohol, having fatigue while driving and defective vehicles is very less and the pattern remains almost similar for whole 18 years.
+
+#### Analysis 5
+```r
+title:"Relations of female driver, male driver, young driver, 
+       60 plus driver, unlicensed driver and provisional 
+       driver with road crashess"
+```
+```r
+drivers<- read.csv(file="driverdemographics.csv", header = TRUE, 
+                   dec = ".") 
+
+deivers2 <- drivers%>%
+  filter(Crash_Severity!="Property damage only")%>%
+  group_by(Crash_Year,Involving_Male_Driver,Involving_Female_Driver,Involving_Young_Driver_16_24,Involving_Senior_Driver_60plus, Involving_Provisional_Driver,Involving_Unlicensed_Driver)%>%
+  summarise(Total_Crash=sum(Count_Crashes))
+
+drivers3 <- deivers2%>% 
+  group_by(Crash_Year)%>%
+  mutate(propo_crash=proportion_freq(Total_Crash))
+
+str(drivers3)
+
+d1 <- ggplot(drivers3, aes(fill=Involving_Female_Driver, y=propo_crash, x=Crash_Year)) + 
+  geom_bar( stat="identity")+scale_fill_manual(values=c("#CC6666", "#9999CC"))+  
+  theme_igray()+
+  ggtitle("Crash Related to Female Driver") #Female
+
+d2 <- ggplot(drivers3, aes(fill=Involving_Male_Driver, y=propo_crash, x=Crash_Year)) + 
+  geom_bar(stat="identity")+scale_fill_manual(values=c("#CC6666", "#9999CC")) +
+  theme_igray()+
+  ggtitle("Crash Related to Male Driver")        #Male
+
+d3 <- ggplot(drivers3, aes(fill=Involving_Young_Driver_16_24, y=propo_crash, x=Crash_Year)) + 
+  geom_bar( stat="identity")+scale_fill_manual(values=c("#CC6666", "#9999CC")) +
+  theme_igray()+
+  ggtitle("Crash Related to Young Driver")       #young     
+                   
+d4 <- ggplot(drivers3, aes(fill=Involving_Senior_Driver_60plus, y=propo_crash, x=Crash_Year)) + 
+  geom_bar( stat="identity")+scale_fill_manual(values=c("#CC6666", "#9999CC")) +
+  theme_igray()
+  ggtitle("Crash Related to 60Plus Driver")        #aged
+
+d5 <- ggplot(drivers3, aes(fill=Involving_Unlicensed_Driver, y=propo_crash, x=Crash_Year)) + 
+  geom_bar( stat="identity")+scale_fill_manual(values=c("#CC6666", "#9999CC"))  +
+  theme_igray()+
+  ggtitle("Crash Related to Unlicensed Driver")    #Unlicensed
+
+d6 <- ggplot(drivers3, aes(fill=Involving_Provisional_Driver, y=propo_crash, x=Crash_Year)) + 
+  geom_bar( stat="identity")+scale_fill_manual(values=c("#CC6666", "#9999CC"))+
+  theme_igray()+
+  ggtitle("Crash Related to Provisional Driver")  #Provisional
+
+grid.arrange(d1,d2,d3,d4,d5,d6, nrow=3)
+```
+<img src="/images/2021-01-17/R1_7.jpeg" width="920>
+
+#### Results
+The 6 stacked bar plots  above shows that the proportion of road crashes in comparison with total crashes is much higher for male than female, around 35% of total crashes occurred by young (16-24) drivers, the crashes occurred by 60plus aged people is around 15% and that increased slightly in recent years, unlicensed drivers committed very few proportion of crashes and lastly  around 20% crashes occurred by the provisional drivers. A very significant scenario is that almost all the 6 factors has very steady pattern in all through the 18 years. The one of the most important implications from this last study is that the young drivers should be more careful while driving.
+
+
+## Conclusion
+There wre many more factors realted to crashes in the dataset which were not consuderd due to keep the analysis under a certain space, such as 'overseas driver', 'not restrain the seat belts' etc.
+Anyweay, in 2001 the population of Queensland was 3.67 million and in 2018 the population was 4.97 million (Australian Bureau of Statistics, 2020). Even though, along with the increased people and increased vehicles, the severity of road crashes actually relatively lessens much in recent years, which we can understand from this study. 
