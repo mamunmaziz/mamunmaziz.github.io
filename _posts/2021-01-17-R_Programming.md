@@ -235,7 +235,7 @@ p4 <- ggplot(factors3, aes(fill=Involving_Defective_Vehicle, y=propo_crash, x=Cr
 
 grid.arrange(p1,p2,p3,p4, nrow=2)
 ```
-<img src="/images/2021-01-17/R1_6.jpeg" width="920>
+<img src="/images/2021-01-17/R1_6.jpeg" width="912"/>
 
 #### Results
 The 4 stacked bar plots above show, in comparison with total crash, that the proportion of crash occurred due to over speeding, drinking alcohol, having fatigue while driving and defective vehicles is very less and the pattern remains almost similar for whole 18 years.
@@ -293,7 +293,7 @@ d6 <- ggplot(drivers3, aes(fill=Involving_Provisional_Driver, y=propo_crash, x=C
 
 grid.arrange(d1,d2,d3,d4,d5,d6, nrow=3)
 ```
-<img src="/images/2021-01-17/R1_7.jpeg" width="920>
+<img src="/images/2021-01-17/R1_7.jpeg" width="912"/>
 
 #### Results
 The 6 stacked bar plots  above shows that the proportion of road crashes in comparison with total crashes is much higher for male than female, around 35% of total crashes occurred by young (16-24) drivers, the crashes occurred by 60plus aged people is around 15% and that increased slightly in recent years, unlicensed drivers committed very few proportion of crashes and lastly  around 20% crashes occurred by the provisional drivers. A very significant scenario is that almost all the 6 factors has very steady pattern in all through the 18 years. The one of the most important implications from this last study is that the young drivers should be more careful while driving.
