@@ -30,6 +30,9 @@ Those ‘Crash data from Queensland Roads’ was originally collected by Departm
 
 
 
+
+
+
 # Data Analysis 
 ---
 ```r
@@ -103,7 +106,7 @@ The total crashes declined gradually in recent years for almost every month. Als
 
 ---
 ```r
-title: "Comparison of the change of Crashes between last 2 decades"
+title:"Comparison of the change of Crashes between last 2 decades"
 ```
 The side-by-side bar chart was plotted where each bar represents the percentage change of road crashes from year 2001 to year 2018 and another bar represents the same for year 2011 to 2018. The bars are divided for each type of severity. Year 2001 to 2010 is a full decade and year 2011 to 2018 is considered another decade (approximately).
 
