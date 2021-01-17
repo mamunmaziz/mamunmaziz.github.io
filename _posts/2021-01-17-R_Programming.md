@@ -34,8 +34,6 @@ Those ‘Crash data from Queensland Roads’ was originally collected by Departm
 ---
 ```r
 title: "The changes of total crash per year by different severity"
-author: "Mamun Aziz"
-date: "10/11/2020"
 ```
 #### Installation
 ```r
@@ -68,6 +66,7 @@ ggplot( yearwise_crash, aes(x = Crash_Year,
   y = Total_Crash, group = Crash_Severity, colour=Crash_Severity)) + 
   geom_line(size=1.1) +
   geom_point(size=2) +
+  theme_wsj()+
   scale_x_continuous(breaks = yearwise_crash$Crash_Year, labels = yearwise_crash$Crash_Year)+
   ggtitle("Yearwise total crashes across each severity")
 ```
@@ -79,8 +78,6 @@ The fatality on road crashes, for last 18 years, remains almost equal; even thou
 ---
 ```r
 title: "Year wise total crashes acrros yeach month"
-author: "Mamun Aziz"
-date: "10/11/2020"
 ```
 ```r
 yearwise_crash_month <- locations%>%
@@ -95,6 +92,7 @@ yearwise_crash_month<- yearwise_crash_month[order(yearwise_crash_month$Crash_Mon
 ggplot( yearwise_crash_month, aes(x = Crash_Year, y = Total_Crash, group = Crash_Month, colour=Crash_Month)) + 
   geom_line(size=.75) +
   geom_point(size=1.25) +
+  theme_fivethirtyeight()+
   scale_x_continuous(breaks = yearwise_crash_month$Crash_Year, labels = yearwise_crash_month$Crash_Year)+
   ggtitle("Yearwise total trashes across each month")
 ```
@@ -104,3 +102,39 @@ ggplot( yearwise_crash_month, aes(x = Crash_Year, y = Total_Crash, group = Crash
 The total crashes declined gradually in recent years for almost every month. Also, minumum number of crashes occuerd during the begginig of year and most crashes occured during mid of the year.
 
 ---
+```r
+title: "Comparison of the change of Crashes between last 2 decades"
+```
+```r
+
+wide_crash <- yearwise_crash %>% 
+   spread (key=Crash_Year, value = Total_Crash)  # wide spread 
+       
+wide_crash1 <- wide_crash%>%
+   select ( 1,2,11,12,19 )%>%    # subset selection
+          rename(year2001=names(.)[2],year2010=names(.)[3],year2011= names(.)[4], year2018=names(.)[5])percentage_change <- function(x,y) ((y-x)*100/x)
+
+percentage_crash_change <- wide_crash1 %>%
+  group_by(Crash_Severity)%>%
+   summarise(year2001_crash=max(year2001),year2010_crash=max(year2010),
+     year2011_crash=max(year2011),year2018_crash=max(year2018))%>%
+    mutate(change_2001to2010=percentage_change(x=year2001_crash,y=year2010_crash), 
+     change_2011to2018=percentage_change(x=year2011_crash,y=year2018_crash))  # Percentage increase
+
+cor(percentage_crash_change$change_2001to2010,percentage_crash_change$change_2011to2018,method = "pearson")
+cor(percentage_crash_change$change_2001to2010,percentage_crash_change$change_2011to2018,method = "spearman")
+
+crash_mat <- melt(percentage_crash_change, measure.vars = c("change_2001to2010","change_2011to2018"))
+ggplot(crash_mat, aes(x=Crash_Severity, y=value, fill=variable)) + 
+  geom_bar( position = "dodge",stat = "identity")+
+  theme_wsj()+
+  scale_fill_manual(values=c("#999999", "#E69F00"))+
+  ggtitle("Comparision: change of Crashes for last 2 decades")
+  ```
+```r 
+> cor(percentage_crash_change$change_2001to2010,percentage_crash_change$change_2011to2018,method = "pearson")
+[1] 0.7930566
+> cor(percentage_crash_change$change_2001to2010,percentage_crash_change$change_2011to2018,method = "spearman")
+[1] 1
+```
+ <img src="/images/2021-01-17/R1_3.jpeg" width="912"/>
