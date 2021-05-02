@@ -34,6 +34,7 @@ header:
 | Data Warehouse, ETL, Microsoft Power BI Tools                                                 | Beginner               | 1                                | 
 | Data truncation, anomalies, Error troubleshooting in SSIS using Conditional Split             | Beginner               | 1                                |
 | MySQL  											| Intermediate           | 5                                |
+| MATLAB                                                                                        | Beginner               | 1                                |
 
 
 
