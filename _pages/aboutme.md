@@ -19,7 +19,7 @@ header:
 
 
 ### Technical know-how realated to data science
-#### R, Python and SQL scripting 
+#### R, Python and SQL scripting, Power BI
 
 | Data Science                                                                                  | Level                  | Years of Expertise               |
 | --------------------------------------------------------------------------------------------- |:----------------------:| --------------------------------:|
