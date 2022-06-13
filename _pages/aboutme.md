@@ -19,7 +19,7 @@ Expertise in telecom switches and transmissions-related database analysis and me
 ### Bachelors in Electrical and Electronic Engineering
 * Completed in October 2002
 
-### Technical know-how realated to data science
+###Technical know-how realated to data science
 #### R, Python and SQL scripting, Power BI
 
 
