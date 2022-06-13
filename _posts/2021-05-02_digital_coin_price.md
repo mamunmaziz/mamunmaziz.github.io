@@ -4,7 +4,7 @@ Date: 2021-05-02
 tags: [Data Science Projects]
 header:
   image: "/images/2021-01-17/analysis-banner.jpg"
-excerpt: "Data Science, Python"
+excerpt: "Data Science, Data Analysis, R"
 mathjax: "true"
 ---
 
