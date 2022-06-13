@@ -1,5 +1,5 @@
 ---
-title: "Simple Python Code: Real time price of digital coin in US doller "
+title: "Simple Python Code: Real time price of digital coin in US doller"
 Date: 2021-05-02
 tags: [Data Science Projects]
 header:
@@ -7,7 +7,6 @@ header:
 excerpt: "Data Science, Data Analysis, R"
 mathjax: "true"
 ---
-
 
 
 ```python
