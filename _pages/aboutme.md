@@ -10,6 +10,7 @@ A certified Data Analyst with experience analyzing technical, and commercial dat
 Expertise in telecom switches and transmissions-related database analysis and meaningful representations of them. Extensive experience and understanding of SpatialNET (Australian Telecommunication Network's visual database). Proficient in geographical information systems, network databases, and MapInfo.
 
 ###Major Certification
+----------------------
 ### Masters in Data Science
 * Completed in May 2022
 
