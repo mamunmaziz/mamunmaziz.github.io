@@ -11,13 +11,13 @@ Expertise in telecom switches and transmissions-related database analysis and me
 
 ###Major Certification
 ----------------------
-### Masters in Data Science
+### Master of Data Science
 * Completed in May 2022
 
-### Masters in Advanced Enginnering Management
+### Master in Advanced Enginnering Management
 * Completed in December 2005
 
-### Bachelors in Electrical and Electronic Engineering
+### Bachelor in Electrical and Electronic Engineering
 * Completed in October 2002
 
 ###Technical know-how realated to data science
