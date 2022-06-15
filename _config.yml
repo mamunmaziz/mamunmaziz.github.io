@@ -12,13 +12,13 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Mumid Sharif Rony"
+title                    : "Mamun Monzurul Aziz"
 title_separator          : "-"
-name                     : "Mumid Sharif Rony"
+name                     : "Mamun Monzurul Aziz"
 description              : "Data Science Portfolio"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -106,18 +106,19 @@ analytics:
 
 # Site Author
 author:
-  name             : "Mumid Sharif Rony"
+   name             : "Mamun Monzurul Aziz"
   avatar           : "/images/profile.jpg"  # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Science Portfolio"
   location         : "Brisbane, QLD, Australia"
-  email            : "mumid_sharif@yahoo.com"
-  contact          : "+61423735785"
-  github           : "mumid"
-  linkedin         : "mumid-sharif-05070a33"
+  email            : "mamunmaziz@gmail.com"
+  contact          : "+614694256065"
+  github           : "mamunmaziz"
+  linkedin         : "mamunmaziz"
+  twitter          : "mamunmaziz"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:mumid_sharif@yahoo.com
+      # url: mamunmaziz@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -132,7 +133,7 @@ author:
       # url: "https://github.com/"
     - label: "mumid-sharif-05070a33"
       icon: "fab fa-fw fa-linkedin"
-      # url: "https://linkedin.com/in"
+      # url: "https://linkedin.com/mamunmaziz"
 
 # Site Footer
 footer:
