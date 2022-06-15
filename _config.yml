@@ -12,15 +12,13 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" # "deafult", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Mamun Monzurul Aziz"
+title                    : "Mumid Sharif Rony"
 title_separator          : "-"
-name                     : "Mamun Monzurul Aziz"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "protfolio"
+name                     : "Mumid Sharif Rony"
 description              : "Data Science Portfolio"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -108,19 +106,18 @@ analytics:
 
 # Site Author
 author:
-  name             : "Mamun Monzurul Aziz"
+  name             : "Mumid Sharif Rony"
   avatar           : "/images/profile.jpg"  # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Science Portfolio"
   location         : "Brisbane, QLD, Australia"
-  email            : "mamunmaziz@gmail.com"
-  contact          : "+614694256065"
-  github           : "mamunmaziz"
-  linkedin         : "mamunmaziz"
-  twitter          : "mamunmaziz"
+  email            : "mumid_sharif@yahoo.com"
+  contact          : "+61423735785"
+  github           : "mumid"
+  linkedin         : "mumid-sharif-05070a33"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mamunmaziz@gmail.com
+      # url: mailto:mumid_sharif@yahoo.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -130,12 +127,12 @@ author:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: "mamunma"
+    - label: "mumid"
       icon: "fab fa-fw fa-github"
       # url: "https://github.com/"
-    - label: "Linkdin"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://linkedin.com/mamunmaziz"
+    - label: "mumid-sharif-05070a33"
+      icon: "fab fa-fw fa-linkedin"
+      # url: "https://linkedin.com/in"
 
 # Site Footer
 footer:
@@ -145,7 +142,7 @@ footer:
       # url:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       # url:
@@ -155,10 +152,9 @@ footer:
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
-    - label: "Linkdin"
+    - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://linkedin.com/mamunmaziz"
-
+      # url:
 
 
 # Reading Files

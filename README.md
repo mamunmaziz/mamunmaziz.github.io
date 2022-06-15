@@ -1,6 +1,3 @@
-# [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
+# Data Science Project Portfolio
 
-# Data Science Related Portfolio
-
-This is a Portfolio to showcase the skill and knowledge of Data Science 
-
+This is a Portfolio to showcase the skill and knowledge of Data Science while Completing Projects for Study, profession and self development.
