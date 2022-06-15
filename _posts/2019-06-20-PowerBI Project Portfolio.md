@@ -1,7 +1,7 @@
 ---
 title: "Power BI Portfolio: Dashboard reporting of Finance, Sales, Procurement, Bank, IT, HR, Product and Manufacture department"
 Date: 2019-01-23
-tags: [ETL and Dashboard Reorting with Power BI]
+tags: [ETL and Dashboard  BI]
 header:
   image: "images/CF.jpg"
 excerpt: "Power BI, Data Visualization, ETL, Dashboard Reporting"
