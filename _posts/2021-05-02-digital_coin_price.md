@@ -1,12 +1,16 @@
 ---
 title: "Simple Python Code: Real time price of digital coin in US doller"
 Date: 2021-05-02
-tags: [Data Science Projects: Python]
+tags: [Data Science Projects with Python]
 header:
   image: "/images/2021-01-17/analysis-banner.jpg"
 excerpt: "Data Science, Data Analysis, R"
 mathjax: "true"
 ---
+
+## Introduction
+
+[ ]
 
 
 ```python
@@ -34,3 +38,4 @@ end = m.end()-11
 final = newString1[0:end]
 print("The value of " + coin.upper() + " is USD $" + final)
 ```
+
