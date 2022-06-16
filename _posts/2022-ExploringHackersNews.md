@@ -1,5 +1,5 @@
 ---
-title: "Data Science Project: Exploring Hackers News Posts"
+title: "Data Science Project: Exploring News Posts"
 Date: 2019-02-10
 tags: [Data Science Projects with Python]
 header:
