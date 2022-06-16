@@ -3,7 +3,7 @@ title: "Data Science Project: Exploring News Posts"
 Date: 2019-02-10
 tags: [Data Science Projects with Python]
 header:
-  image: "/images/2019-02-10/office-4.jpg"
+  image: "/images/CF.jpg"
 excerpt: "Data Science, Data Analysis, Python"
 mathjax: "true"
 ---
