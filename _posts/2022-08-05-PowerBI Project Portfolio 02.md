@@ -11,7 +11,7 @@ mathjax: "true"
 ## Introduction
 To demonstrate my competency, and expertise in Power BI reports and dashboards, I will show some of my free-lance work under an experienced Power BI professional. The data and company names used in this portfolio have been altered for security and compliance reasons.
 
-### The Key skills and l knowledge applied :  
+### The Key skills and knowledge applied :  
 - Utilize power query to perform ETL.
 - Access Data from cloud, csv, excel, SQL.
 - Data transform and Preparation (update and append table).
