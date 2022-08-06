@@ -23,14 +23,14 @@ To demonstrate my competency, and expertise in Power BI reports and dashboards, 
 - Publish dashboards, workspaces, and apps and collaborate with others.
 
 ## Sales Report
-The top page adds a home page by using a bookmark and button that allows you to navigate all other pages of the report. This study examined five products and their sales all over the world over a specific period of time.
+The top page adds a home page by using a bookmark and button that allows us to navigate all other pages of the report. This study examined five products and their sales all over the world over a specific period of time.
 
 On the first page, there is a sales report containing total and gross sales across countries with slicers for Product, year, and month. To make the report attractive, a scroll bar shows total sales per country along with a search visual for drilling down into the country. The Profit and Discount page shows profit and discounts across the country and time, and the product is also used as a slicer.
 
 
 The sales by month page displays sales of products by month with bar charts for each selected product. The sales by product page uses an area chart to show all the sales for all products, and the detail page includes all the details. Here, matrix tables contain the detailed amounts by product, and card visuals show totals such as sales and gross sales. Reports use drilling through and DAX Dynamic measures to calculate average sales and average gross sales per country.
 
-<iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNjJhMDUzNzMtMGEyYi00YTBiLTkzZDItNjlkYjU3MTUwNmJkIiwidCI6ImRjZTdlZTY5LTNjOTYtNGEzMi05ZmMwLWUzMjc3YTllMTAxYiIsImMiOjEwfQ%3D%3D&pageName=ReportSection5133b073e97710ef4c30" frameborder="0" allowFullScreen="true"></iframe>
+<iframe width="800" height="550" src="https://app.powerbi.com/view?r=eyJrIjoiNjJhMDUzNzMtMGEyYi00YTBiLTkzZDItNjlkYjU3MTUwNmJkIiwidCI6ImRjZTdlZTY5LTNjOTYtNGEzMi05ZmMwLWUzMjc3YTllMTAxYiIsImMiOjEwfQ%3D%3D&pageName=ReportSection5133b073e97710ef4c30" frameborder="0" allowFullScreen="true"></iframe>
 
 
 ## Budget spending Analysis
