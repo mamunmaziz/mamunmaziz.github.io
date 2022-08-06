@@ -22,6 +22,13 @@ To demonstrate my competency, and expertise in Power BI reports and dashboards, 
 - Add alerts and subscriptions to the dashboard
 - Publish dashboards, workspaces, and apps and collaborate with others.
 
+## Sales Report
+A home page was addedd using bookmark to neviagte all pther reprt pages.
+
+
+<iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNjJhMDUzNzMtMGEyYi00YTBiLTkzZDItNjlkYjU3MTUwNmJkIiwidCI6ImRjZTdlZTY5LTNjOTYtNGEzMi05ZmMwLWUzMjc3YTllMTAxYiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+
+
 ## Budget spending Analysis
 On the first page, a company's budget is presented along with its total annual and quarterly expenditures. The second page of the report contains quarterly budgets by business unit and department, as well as the sum of quarterly budgets and spending, which is ultimately the annual budget and spending. Data drilling by quarter is done using drill through. DAX Dynamic Measure is used to calculate annual spending and budget. On the third page, the top ten items are listed according to budget and expenditure per annum. A table and bar are also used to show the annual budget, spent, and remaining table and bar.
 
