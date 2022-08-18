@@ -32,3 +32,10 @@ The second page shows sales and revenue by state and subcategory. On the third p
 On the fourth page, the Total Amounts of Revenue are displayed using a multi-row card. Bookmarks and cards are used to show the details of specific top 3 products. The 5th page shows the entire cost of logistics services and the total cost for the year. To show the details when hovering over the state bar on page 2, a tooltip was created.
 <iframe width="800" height="550" src=" https://app.powerbi.com/view?r=eyJrIjoiMmY1NmM2YjgtMDEyZC00ZWUzLWIwMmQtNDYwY2E3YjczZTE5IiwidCI6ImRjZTdlZTY5LTNjOTYtNGEzMi05ZmMwLWUzMjc3YTllMTAxYiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
 
+
+## Consumer Data Analysis
+This project was also completed during the Power Bi study period, and many Power Bi techniques were implemented. Some of those are data preparation tool, transforming data, customizing tables, conditional formatting, merging queries, pivoting and unpivoting, one-to-one and many-to-many relationships, filter visuals, filter pane, TopN filter, Sync Slicers, Treemap Visuals, drill through, keep filter with drill through, custom column, conditional column, cards, working with tooltip pages, working with parameters, calculating measures with DAX language and so on.
+The first page of reporting shows the average amount of fish and meat products consumed by different education group using simple bar and pi chart. Second page shows the success of first 2 marketing campaign and compared those. The third page also shows the comparison of all the marketing campaign, number of products by category ands education group and the successful campaign by country; drill through, filter and tooltip are used in this page extensively. The nest page is details page, it shows a table as summary and the button are created to show top 10 customers . Card was also used to show the amount of total consumed products. 
+
+<iframe width="800" height="550" src=" https://app.powerbi.com/view?r=eyJrIjoiMDE1MzdhOGYtMDFjNi00YWJlLTk3OWMtNjRiZTlhMDE1ZWQ4IiwidCI6ImRjZTdlZTY5LTNjOTYtNGEzMi05ZmMwLWUzMjc3YTllMTAxYiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+
