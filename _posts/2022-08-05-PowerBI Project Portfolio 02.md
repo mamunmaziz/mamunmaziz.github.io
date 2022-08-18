@@ -1,7 +1,7 @@
 ---
-title: "Power BI Portfolio: Dashboard reporting for free lance works "
+title: "Power BI Portfolio: Dashboard reporting for freelance works "
 Date: 2022-06-13
-tags: [ETL and Dashboard Reorting with Power BI]
+tags: [ETL and Dashboard Reporting with Power BI]
 header:
   image: "/images/PBI2.jpg"
 excerpt: "Power BI, Data Visualization, ETL, Dashboard Reporting"
