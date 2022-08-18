@@ -1,5 +1,5 @@
 ---
-title: "Power BI Portfolio: Dashboard reporting 02"
+title: "Power BI Portfolio: Dashboard reporting for free lance works "
 Date: 2022-06-13
 tags: [ETL and Dashboard Reorting with Power BI]
 header:
