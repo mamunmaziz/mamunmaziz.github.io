@@ -22,7 +22,7 @@ My Power Bi portfolio includes some of my analysis and dashboard work completed 
 - Add alerts and subscriptions to the dashboard
 - Publish dashboards, workspaces, and apps and collaborate with others.
 
-## Financial Report
+## Financial Report Anlysis
 This project involved the implementation of many more Power Bi techniques by using the data preparation tool, transforming data, customizing tables, conditional formatting, merging queries, pivoting and unpivoting, one-to-one and many-to-many relationships, filter visuals, filter pane, TopN filter, Sync Slicers, Treemap Visuals, drill through, keep filter with drill through, custom column, conditional column, Maps, drill through with a button, bookmarks, cards, working with tooltip pages, working with parameters, calculating columns and measures in DAX language and so on.
 Using the above techniques, I have used data from a few products used in different parts of the United States.
 
