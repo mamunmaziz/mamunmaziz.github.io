@@ -13,16 +13,16 @@ My Power Bi portfolio includes some of my analysis and dashboard work completed 
 
 ### The Key skills and knowledge applied :  
 - Utilize power query to perform ETL.
-- Access Data from cloud, csv, excel, SQL.
-- Data transform and Preparation (update and append table).
+- Access Data from the cloud, CSV, Excel, and SQL.
+- Data transformation and Preparation (update and append table).
 - Create custom tables, relationships, star, or snowflakes schema Tables.
 - Prepare data Visualization and reporting 
-- DAX measure calculation using sum, count, calculate, divide, and time intelligence.
-- Create Dynamic Measure, Dynamic Dimension, Tooltip, Bookmark in reporting. 
+- DAX measures calculation using sum, count, calculate, divide, and time intelligence.
+- Create Dynamic Measure, Dynamic Dimension, Tooltip, and Bookmark in reporting. 
 - Add alerts and subscriptions to the dashboard
 - Publish dashboards, workspaces, and apps and collaborate with others.
 
-## Financial Report Anlysis
+## Financial Report Analysis
 This project involved the implementation of many more Power Bi techniques by using the data preparation tool, transforming data, customizing tables, conditional formatting, merging queries, pivoting and unpivoting, one-to-one and many-to-many relationships, filter visuals, filter pane, TopN filter, Sync Slicers, Treemap Visuals, drill through, keep filter with drill through, custom column, conditional column, Maps, drill through with a button, bookmarks, cards, working with tooltip pages, working with parameters, calculating columns and measures in DAX language and so on.
 Using the above techniques, I have used data from a few products used in different parts of the United States.
 
@@ -34,9 +34,18 @@ On the fourth page, the Total Amounts of Revenue are displayed using a multi-row
 
 
 ## Consumer Data Analysis
-This project was also completed during the Power Bi study period, and many Power Bi techniques were implemented. Some of those are data preparation tool, transforming data, customizing tables, conditional formatting, merging queries, pivoting and unpivoting, one-to-one and many-to-many relationships, filter visuals, filter pane, TopN filter, Sync Slicers, Treemap Visuals, drill through, keep filter with drill through, custom column, conditional column, cards, working with tooltip pages, working with parameters, calculating measures with DAX language and so on.
+This project was also completed during the Power Bi study period, and many Power Bi techniques were implemented. Some of those are data preparation tools, transforming data, customizing tables, conditional formatting, merging queries, pivoting and unpivoting, one-to-one and many-to-many relationships, filter visuals, filter pane, TopN filter, Sync Slicers, Treemap Visuals, drill through, keep filter with drill through, custom column, conditional column, cards, working with tooltip pages, working with parameters, calculating measures with DAX language and so on.
 
-The first page of reporting shows the average amount of fish and meat products consumed by different education group using simple bar and pi chart. Second page shows the success of first 2 marketing campaign and compared those. The third page also shows the comparison of all the marketing campaign, number of products by category ands education group and the successful campaign by country; drill through, filter and tooltip are used in this page extensively. The nest page is details page, it shows a table as summary and the button are created to show top 10 customers . Card was also used to show the amount of total consumed products. 
+The first page of reporting shows the average amount of fish and meat products consumed by different education groups using a simple bar and pie chart. The second page shows the success of the first 2 marketing campaigns and compared those. The third page also shows the comparison of all the marketing campaigns, a number of products by category and education group, and the successful campaign by country; drill through, filter, and tooltip are used in this page extensively. The next page is details page, it shows a table as a summary, and the button is created to show the top 10 customers. The card was also used to show the amount of total consumed products. 
 
 <iframe width="800" height="550" src=" https://app.powerbi.com/view?r=eyJrIjoiMDE1MzdhOGYtMDFjNi00YWJlLTk3OWMtNjRiZTlhMDE1ZWQ4IiwidCI6ImRjZTdlZTY5LTNjOTYtNGEzMi05ZmMwLWUzMjc3YTllMTAxYiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+
+## Bank Data Analysis
+The customer data of a bank was used for the study and a dynamic dashboard was prepared after analysis. In order to ensure security and compliance, all data and bank names have been altered. 
+
+In the first three pages of the report, customer data is presented using slicers, maps, bar charts, column charts, and pie charts with tooltips and drill-throughs.
+The fourth page compares the customer data with the total balance. In addition to the main cards, there are a few additional cards that show variable amounts and quantities. Differentiation between cards is clearly illustrated with visual images.
+The fifth page is designed with advanced DAX measures, such as Dynamic Measures and Dynamic Dimensions. We use the same visualization templates as on previous pages.
+ 
+<iframe width="800" height="550" src=" https://app.powerbi.com/view?r=eyJrIjoiOGZjMjgyODYtZmZmOS00ZWJjLTk1MDQtMWIxMWM4YmU0ZTU0IiwidCI6ImRjZTdlZTY5LTNjOTYtNGEzMi05ZmMwLWUzMjc3YTllMTAxYiIsImMiOjEwfQ%3D%3D&pageName=ReportSection6d322c04bad9578707d0" frameborder="0" allowFullScreen="true"></iframe>
 
