@@ -3,14 +3,14 @@ title: "Simple Python Code: Real time price of digital coin in US doller"
 Date: 2021-05-02
 tags: [Data Science Projects with Python]
 header:
-  image: "/images/2021-01-17/analysis-banner.jpg"
+  image: "/images/CF.jpg"
 excerpt: "Data Science, Data Analysis, R"
 mathjax: "true"
 ---
 
 ## Introduction
 
-[ ]
+A simple python code was written for find out the cryptocurrenbcy real time price from webpage .
 
 
 ```python
