@@ -356,6 +356,7 @@ Cleaning data:
         6 - Finish cleaning
 
 1
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L2.JPG" alt="">
 
 Cleaning data:
