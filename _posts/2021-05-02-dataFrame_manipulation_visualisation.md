@@ -307,3 +307,127 @@ def save_data(data_frame):
 main()
 ```
 
+ Welcome to The DataFrame Statistician!
+ Programmed by Mamun Monzurul Aziz
+ 
+Please choose from the following options: 
+    1 – Load data from a file 
+    2 – View data 
+    3 – Clean data 
+    4 – Analyse data 
+    5 – Visualise data 
+    6 - Save data to a file 
+    7 - Quit
+
+>>>1
+
+Enter the filename: sampledata.csv
+Data has been loaded successfully
+Which column do you want to set as index? (leave blank for none) 
+day
+min_temp
+max_temp
+rainfall
+humidity
+
+>>>day
+day set as index 
+Please choose from the following options: 
+    1 – Load data from a file 
+    2 – View data 
+    3 – Clean data 
+    4 – Analyse data 
+    5 – Visualise data 
+    6 - Save data to a file 
+    7 - Quit
+
+>>>3
+Cleaning...
+     min_temp  max_temp  rainfall  humidity
+day                                        
+1        11.0      23.0       3.0        55
+2        13.0      25.0       0.0        60
+3         9.0      19.0      17.0        80
+4         9.0      18.0      36.0        85
+5         NaN       NaN       NaN        50
+6        12.0      22.0       NaN        60
+7        13.0      23.0       0.0        65
+Cleaning data:
+        1 - Drop rows with missing values 
+        2 - Fill missing values 
+        3 - Drop duplicate rows 
+        4 - Drop column 
+        5 - Rename column 
+        6 - Finish cleaning
+
+>>>1
+
+Enter the threshold for dropping rows: 1
+     min_temp  max_temp  rainfall  humidity
+day                                        
+1        11.0      23.0       3.0        55
+2        13.0      25.0       0.0        60
+3         9.0      19.0      17.0        80
+4         9.0      18.0      36.0        85
+5         NaN       NaN       NaN        50
+6        12.0      22.0       NaN        60
+7        13.0      23.0       0.0        65
+Cleaning data:
+        1 - Drop rows with missing values 
+        2 - Fill missing values 
+        3 - Drop duplicate rows 
+        4 - Drop column 
+        5 - Rename column 
+        6 - Finish cleaning
+
+>>>2
+
+Enter the replacement value: 0
+     min_temp  max_temp  rainfall  humidity
+day                                        
+1        11.0      23.0       3.0        55
+2        13.0      25.0       0.0        60
+3         9.0      19.0      17.0        80
+4         9.0      18.0      36.0        85
+5         0.0       0.0       0.0        50
+6        12.0      22.0       0.0        60
+7        13.0      23.0       0.0        65
+Cleaning data:
+        1 - Drop rows with missing values 
+        2 - Fill missing values 
+        3 - Drop duplicate rows 
+        4 - Drop column 
+        5 - Rename column 
+        6 - Finish cleaning
+
+>>>6
+<function clean_data at 0x000002042010C4C8>
+Please choose from the following options: 
+    1 – Load data from a file 
+    2 – View data 
+    3 – Clean data 
+    4 – Analyse data 
+    5 – Visualise data 
+    6 - Save data to a file 
+    7 - Quit
+
+>>>5
+Please choose from the following kinds: line, bar, box
+
+>>>bar
+Do you want to use subplots? (y/n))
+
+>>>y
+Please enter the title for this plot (leave blank for no title): 
+
+>>>
+Please enter the x-axis label (leave blank for no label): 
+
+>>>
+Please enter the y-axis label (leave blank for no label): 
+
+
+
+## Visualiation:
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/Figure 2022-08-21 002857.png" alt="">
