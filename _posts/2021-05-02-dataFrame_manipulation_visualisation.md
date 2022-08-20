@@ -1,6 +1,6 @@
 ---
-title: "Python Code: DataFrame manipulation and visualisation"
-Date: 2021-05-02
+title: "Python Code: DataFrame alteration and visualisation using python"
+Date: 2022-08-21
 tags: [Data Science Projects with Python]
 header:
   image: "/images/CF.jpg"
@@ -10,8 +10,7 @@ mathjax: "true"
 
 ## Introduction
 
-A simple python code was written for find out the cryptocurrenbcy real time price from webpage .
-
+As part of study project a simpl program in Python was prepared using pandas as detailed to Design and implement a data analysis task.The program will allow users to load a DataFrame from a sample CSV file, clean the data in various ways, display statistics, and create visualisations.
 
 ```python
 
@@ -434,3 +433,6 @@ Please enter the y-axis label (leave blank for no label):
 ## Visualiation:
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/Figure 2022-08-21 005930.png" alt="">
+
+## Conclution
+From this simple program we can load a .csv file and make some anylysis with three types of visualization such as line, bar and box plot. 
