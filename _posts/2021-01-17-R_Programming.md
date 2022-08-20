@@ -307,3 +307,4 @@ The 6 stacked bar plots  above shows that the proportion of road crashes in comp
 There were many more factors related to crashes in the dataset which were not considered due to size of the projects, such as 'overseas driver', 'not restrain the seat belts' etc.
 Anyway, in 2001 the population of Queensland was 3.67 million and in 2018 the population was 4.97 million (Australian Bureau of Statistics, 2020). Even though, along with the increased people and increased vehicles, the severity of road crashes actually relatively lessens much in recent years, which we can understand from this study.
 
+
