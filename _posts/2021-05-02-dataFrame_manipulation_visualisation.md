@@ -340,9 +340,11 @@ Please choose from the following options:
     6 - Save data to a file 
     7 - Quit
 >>>2
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L.JPG" alt="">
 
 >>>3
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L1.JPG" alt="">
 Cleaning data:
         1 - Drop rows with missing values 
@@ -353,7 +355,7 @@ Cleaning data:
         6 - Finish cleaning
 
 >>>1
-JPGjpg" alt="">
+
 Cleaning data:
         1 - Drop rows with missing values 
         2 - Fill missing values 
@@ -374,6 +376,7 @@ Cleaning data:
         6 - Finish cleaning
 
 >>>6
+
 <function clean_data at 0x000002042010C4C8>
 Please choose from the following options: 
     1 – Load data from a file 
@@ -385,18 +388,23 @@ Please choose from the following options:
     7 - Quit
 
 >>>5
+
 Please choose from the following kinds: line, bar, box
 
 >>>line
+
 Do you want to use subplots? (y/n))
 
 >>>y
+
 Please enter the title for this plot (leave blank for no title): 
 
 >>>line chart
+
 Please enter the x-axis label (leave blank for no label): 
 
 >>>day
+
 Please enter the y-axis label (leave blank for no label): 
 
 
@@ -414,12 +422,15 @@ Please choose from the following options:
     7 - Quit
 
 >>>5
+
 Please choose from the following kinds: line, bar, box 
 
 >>>bar
+
 Do you want to use subplots? (y/n))
 
 >>>y
+
 Please enter the title for this plot (leave blank for no title): 
 
 >>>bar chart
@@ -427,6 +438,7 @@ Please enter the title for this plot (leave blank for no title):
 Please enter the x-axis label (leave blank for no label): 
 
 >>>
+
 Please enter the y-axis label (leave blank for no label): 
 
 ## Visualiation:
