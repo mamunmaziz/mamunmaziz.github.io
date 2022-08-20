@@ -40,3 +40,9 @@ On the first page, a company's budget is presented along with its total annual a
 <iframe width="800" height="550" src=" https://app.powerbi.com/view?r=eyJrIjoiY2Q0OGJlYzYtNTg2Ny00MzhhLWEzMjItNjk1MzBlMzFhNTFmIiwidCI6ImRjZTdlZTY5LTNjOTYtNGEzMi05ZmMwLWUzMjc3YTllMTAxYiIsImMiOjEwfQ%3D%3D&pageName=ReportSection60a74daab89e80c85add" frameborder="0" allowFullScreen="true"></iframe>
 
 
+## Agro Market Analysis in Bangladesh 
+The dataset used in this analysis represents a variety of agro products in Bangladesh. For ease of access, a home page was created using bookmarks that linked to each visualization page.  A page with the motion technique was created with the 'Play Axis' visual theme to show the Geo Graphical visual of monthly feed sales and the page was given the name 'Geo-Graphical Visual'. 
+
+<iframe width="800" height="550" src=" https://app.powerbi.com/view?r=eyJrIjoiYTdiYTMwNWYtNzRkOS00MGVjLTgxYzgtZWRkMzFlOGYzZTg0IiwidCI6ImRjZTdlZTY5LTNjOTYtNGEzMi05ZmMwLWUzMjc3YTllMTAxYiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+
+
