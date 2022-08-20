@@ -318,7 +318,7 @@ Please choose from the following options:
     6 - Save data to a file 
     7 - Quit
 
->>>1
+1
 
 Enter the filename: sampledata.csv
 Data has been loaded successfully
@@ -329,7 +329,7 @@ max_temp
 rainfall
 humidity
 
->>>day
+day
 day set as index 
 Please choose from the following options: 
     1 – Load data from a file 
@@ -339,11 +339,11 @@ Please choose from the following options:
     5 – Visualise data 
     6 - Save data to a file 
     7 - Quit
->>>2
+2
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L.JPG" alt="">
 
->>>3
+3
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L1.JPG" alt="">
 Cleaning data:
@@ -354,7 +354,7 @@ Cleaning data:
         5 - Rename column 
         6 - Finish cleaning
 
->>>1
+1
 
 Cleaning data:
         1 - Drop rows with missing values 
@@ -364,7 +364,7 @@ Cleaning data:
         5 - Rename column 
         6 - Finish cleaning
 
->>>2
+2
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L3.JPG" alt="">
 Cleaning data:
@@ -375,7 +375,7 @@ Cleaning data:
         5 - Rename column 
         6 - Finish cleaning
 
->>>6
+6
 
 <function clean_data at 0x000002042010C4C8>
 Please choose from the following options: 
@@ -387,23 +387,23 @@ Please choose from the following options:
     6 - Save data to a file 
     7 - Quit
 
->>>5
+5
 
 Please choose from the following kinds: line, bar, box
 
->>>line
+line
 
 Do you want to use subplots? (y/n))
 
->>>y
+y
 
 Please enter the title for this plot (leave blank for no title): 
 
->>>line chart
+line chart
 
 Please enter the x-axis label (leave blank for no label): 
 
->>>day
+day
 
 Please enter the y-axis label (leave blank for no label): 
 
@@ -421,23 +421,22 @@ Please choose from the following options:
     6 - Save data to a file 
     7 - Quit
 
->>>5
+5
 
 Please choose from the following kinds: line, bar, box 
 
->>>bar
+bar
 
 Do you want to use subplots? (y/n))
 
->>>y
+y
 
 Please enter the title for this plot (leave blank for no title): 
 
->>>bar chart
+bar chart
 
 Please enter the x-axis label (leave blank for no label): 
 
->>>
 
 Please enter the y-axis label (leave blank for no label): 
 
