@@ -340,6 +340,8 @@ Please choose from the following options:
     5 – Visualise data 
     6 - Save data to a file 
     7 - Quit
+>>>2
+<img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L.jpg" alt="">
 
 >>>3
 <img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L1.jpg" alt="">
@@ -387,20 +389,48 @@ Please choose from the following options:
 >>>5
 Please choose from the following kinds: line, bar, box
 
+>>>line
+Do you want to use subplots? (y/n))
+
+>>>y
+Please enter the title for this plot (leave blank for no title): 
+
+>>>line chart
+Please enter the x-axis label (leave blank for no label): 
+
+>>>day
+Please enter the y-axis label (leave blank for no label): 
+
+
+## Visualiation:
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/Figure 2022-08-21 005723.png" alt="">
+
+Please choose from the following options: 
+    1 – Load data from a file 
+    2 – View data 
+    3 – Clean data 
+    4 – Analyse data 
+    5 – Visualise data 
+    6 - Save data to a file 
+    7 - Quit
+
+>>>5
+Please choose from the following kinds: line, bar, box 
+
 >>>bar
 Do you want to use subplots? (y/n))
 
 >>>y
 Please enter the title for this plot (leave blank for no title): 
 
->>>
+>>>bar chart
+
 Please enter the x-axis label (leave blank for no label): 
 
 >>>
 Please enter the y-axis label (leave blank for no label): 
 
-
-
 ## Visualiation:
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/Figure 2022-08-21 002857.png" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/Figure 2022-08-21 005930.png" alt="">
