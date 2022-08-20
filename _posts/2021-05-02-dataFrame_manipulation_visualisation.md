@@ -16,11 +16,7 @@ A simple python code was written for find out the cryptocurrenbcy real time pric
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
-
-
-
 print(" Welcome to The DataFrame Statistician!\n Programmed by Mamun Monzurul Aziz\n ") 
-
 MAIN_MENU = '''Please choose from the following options: 
     1 – Load data from a file 
     2 – View data 
@@ -29,8 +25,6 @@ MAIN_MENU = '''Please choose from the following options:
     5 – Visualise data 
     6 - Save data to a file 
     7 - Quit'''
-
-
 
 def main():
     print(MAIN_MENU)
@@ -309,6 +303,6 @@ def save_data(data_frame):
     return data_frame  
 
 main()          
-        
+       
 ```
 
