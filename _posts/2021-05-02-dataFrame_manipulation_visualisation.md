@@ -340,10 +340,10 @@ Please choose from the following options:
     6 - Save data to a file 
     7 - Quit
 >>>2
-<img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L.jpg" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L.JPG" alt="">
 
 >>>3
-<img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L1.jpg" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L1.JPG" alt="">
 Cleaning data:
         1 - Drop rows with missing values 
         2 - Fill missing values 
@@ -353,8 +353,7 @@ Cleaning data:
         6 - Finish cleaning
 
 >>>1
-
-<img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L2.jpg" alt="">
+JPGjpg" alt="">
 Cleaning data:
         1 - Drop rows with missing values 
         2 - Fill missing values 
@@ -365,7 +364,7 @@ Cleaning data:
 
 >>>2
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L3.jpg" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L3.JPG" alt="">
 Cleaning data:
         1 - Drop rows with missing values 
         2 - Fill missing values 
