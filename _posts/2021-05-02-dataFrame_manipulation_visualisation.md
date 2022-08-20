@@ -346,6 +346,7 @@ Please choose from the following options:
 3
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L1.JPG" alt="">
+
 Cleaning data:
         1 - Drop rows with missing values 
         2 - Fill missing values 
@@ -356,6 +357,7 @@ Cleaning data:
 
 1
 <img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L2.JPG" alt="">
+
 Cleaning data:
         1 - Drop rows with missing values 
         2 - Fill missing values 
@@ -367,6 +369,7 @@ Cleaning data:
 2
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L3.JPG" alt="">
+
 Cleaning data:
         1 - Drop rows with missing values 
         2 - Fill missing values 
@@ -378,6 +381,7 @@ Cleaning data:
 6
 
 <function clean_data at 0x000002042010C4C8>
+
 Please choose from the following options: 
     1 – Load data from a file 
     2 – View data 
