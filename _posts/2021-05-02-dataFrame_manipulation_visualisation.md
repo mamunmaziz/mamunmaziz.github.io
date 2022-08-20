@@ -4,7 +4,7 @@ Date: 2021-05-02
 tags: [Data Science Projects with Python]
 header:
   image: "/images/CF.jpg"
-excerpt: "Data Science, Data Analysis, R"
+excerpt: "Data Science, Data Analysis, Python"
 mathjax: "true"
 ---
 
