@@ -1,5 +1,5 @@
 ---
-title: "Simple Python Code: Real time price of digital coin in US doller"
+title: "Python Code: DataFrame manipulation and visualisation"
 Date: 2021-05-02
 tags: [Data Science Projects with Python]
 header:
