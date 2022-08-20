@@ -41,8 +41,14 @@ On the first page, a company's budget is presented along with its total annual a
 
 
 ## Agro Market Analysis in Bangladesh 
-The dataset used in this analysis represents a variety of agro products in Bangladesh. For ease of access, a home page was created using bookmarks that linked to each visualization page.  A page with the motion technique was created with the 'Play Axis' visual theme to show the Geo Graphical visual of monthly feed sales and the page was given the name 'Geo-Graphical Visual'. 
+The dataset used in this analysis represents a variety of agro products in Bangladesh. For ease of access, a home page was created using bookmarks that linked to each visualization page.  A page with the motion technique was created with the 'Play Axis' visual theme to show the Geo Graphical visual of monthly feed sales and the page was given the name 'Geo-Graphical Visual'. In the video, regions, years, months, sales, and category-based map locations are shown with bubbles indicating the size of sales quantities in MT for each region, year, and month.
 
-<iframe width="800" height="550" src=" https://app.powerbi.com/view?r=eyJrIjoiYTdiYTMwNWYtNzRkOS00MGVjLTgxYzgtZWRkMzFlOGYzZTg0IiwidCI6ImRjZTdlZTY5LTNjOTYtNGEzMi05ZmMwLWUzMjc3YTllMTAxYiIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+On the first three pages, the market size is shown as a regional map where sales volume is used to determine the size of bubbles. Some pages make use of filters for groups, categories, and regions, as well as buttons. The tooltips are arranged according to drilling through and hovering over.
+ 
+On the fourth page, the table shows the market structure and shares of different companies. Page five and page six contain sales data, region-wise production data, market size information, and growth data for fish products. On the seventh page, fish production statistics are presented in an elaborate table by region. Eighth page shows top performers by area and category. The rank group is used here to filter by category. On page nine, market shares for different feed products are presented in tabular form. Basically, the last page shows the achievement percentage of non-performers by territory and month.
+
+
+<iframe width="800" height="550" src=" https://app.powerbi.com/view?r=eyJrIjoiYTdiYTMwNWYtNzRkOS00MGVjLTgxYzgtZWRkMzFlOGYzZTg0IiwidCI6ImRjZTdlZTY5LTNjOTYtNGEzMi05ZmMwLWUzMjc3YTllMTAxYiIsImMiOjEwfQ%3D%3D&pageName=ReportSectionca78ce87e3d1255b7890" frameborder="0" allowFullScreen="true"></iframe>
+
 
 
