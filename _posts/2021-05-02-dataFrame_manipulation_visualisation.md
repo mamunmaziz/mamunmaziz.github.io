@@ -342,16 +342,7 @@ Please choose from the following options:
     7 - Quit
 
 >>>3
-Cleaning...
-     min_temp  max_temp  rainfall  humidity
-day                                        
-1        11.0      23.0       3.0        55
-2        13.0      25.0       0.0        60
-3         9.0      19.0      17.0        80
-4         9.0      18.0      36.0        85
-5         NaN       NaN       NaN        50
-6        12.0      22.0       NaN        60
-7        13.0      23.0       0.0        65
+<img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L1.jpg" alt="">
 Cleaning data:
         1 - Drop rows with missing values 
         2 - Fill missing values 
@@ -362,16 +353,7 @@ Cleaning data:
 
 >>>1
 
-Enter the threshold for dropping rows: 1
-     min_temp  max_temp  rainfall  humidity
-day                                        
-1        11.0      23.0       3.0        55
-2        13.0      25.0       0.0        60
-3         9.0      19.0      17.0        80
-4         9.0      18.0      36.0        85
-5         NaN       NaN       NaN        50
-6        12.0      22.0       NaN        60
-7        13.0      23.0       0.0        65
+<img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L2.jpg" alt="">
 Cleaning data:
         1 - Drop rows with missing values 
         2 - Fill missing values 
@@ -382,16 +364,7 @@ Cleaning data:
 
 >>>2
 
-Enter the replacement value: 0
-     min_temp  max_temp  rainfall  humidity
-day                                        
-1        11.0      23.0       3.0        55
-2        13.0      25.0       0.0        60
-3         9.0      19.0      17.0        80
-4         9.0      18.0      36.0        85
-5         0.0       0.0       0.0        50
-6        12.0      22.0       0.0        60
-7        13.0      23.0       0.0        65
+<img src="{{ site.url }}{{ site.baseurl }}/images/2022-08-21/L3.jpg" alt="">
 Cleaning data:
         1 - Drop rows with missing values 
         2 - Fill missing values 
