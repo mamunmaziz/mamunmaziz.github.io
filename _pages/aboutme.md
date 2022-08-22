@@ -30,7 +30,7 @@ Based on my interest and study in Data Science, I am currently expanding my stat
 ### Power BI
 
 ### Data Science related certifications
-
+---------------------------------------
 * SAS – James Cook University Academic Specialisation in Advanced Data Science, Issued by SAS
 *	SAS and Hadoop, Issued by SAS
 *	Introduction to Data Curation for SAS Data Scientists, Issued by SAS
