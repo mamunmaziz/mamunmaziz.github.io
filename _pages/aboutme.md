@@ -5,9 +5,11 @@ header:
   image: "/images/aboutme.jpg"
 ---
 
-A certified Data Analyst with experience analyzing technical, and commercial data sets and generating dashboard reports to support business strategy, and forecasting decisions using tools such as Python, SQL, Power BI, Excel, and R. Currently expanding my statistical proficiency and career based on my "Master's in Data Science" as a freelance worker.
+* Certified Data Analyst and Data Scientist with freelance experience analyzing commercial and technical data and producing dashboard reports for business strategy and forecasting using Python, SQL, PowerBI, Excel, and R tools. 
+A master of data science degree from James Cook University taught me a lot about data modeling and preparation.
+Based on my interest and study in Data Science, I am currently expanding my statistical skill set and career.
 
-Expertise in telecom switches and transmissions-related database analysis and meaningful representations of them. Extensive experience and understanding of SpatialNET (Australian Telecommunication Network's visual database). Proficient in geographical information systems, network databases, and MapInfo.
+* Expertise in telecom switch and transmission-related database analysis and meaningful representation. Detailed knowledge of and experience with SpatialNET (the visual database of the Australian Telecommunications Network). A proficient user of geographic information systems, network databases, and MapInfo.
 
 ## Major Certification
 ----------------------
