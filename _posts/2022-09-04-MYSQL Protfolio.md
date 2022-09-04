@@ -35,6 +35,7 @@ The next step is to create a table within our database so that we can store our 
 
 There are many ways to get data into a MySQL table. First I have tried with ‘Table Data Import Wizard’ but as the dataset is more than 23M large, the wizard is taking very long time and can load only a portion od data.
 So, I have used the MYQL’s built in ‘Load Data’ statement as.
+
 ```sql
 LOAD DATA LOCAL INFILE dir:\\<path…>\\CA_DRU_proj_2010-2060.csv'
 INTO TABLE pop_projection
