@@ -30,13 +30,12 @@ In this study a large dataset of “California Population Projection by County, 
 ### Create a DATABASE:
 We need to create a new schema once the MySQL Workbench is open, and the local server is connected. We'll call it ‘cal_pop’ for our California population data.  After I've entered the name, I'll click Apply. Once the newly created schemas have appeared in the Navigator pane, we can see our new 'cal_pop' database. When I double-clicked it, I saw that there are folders for Tables, Views, and Procedures and Functions, but they are all empty right now.
 
-### Create a table in MySQL
+### Create a table in MySQL:
 The next step is to create a table within our database so that we can store our data. The easiest way to create a new table is to right-click on the Tables folder beneath the name of your database and select Create Table. Because we will be storing California population projections, I named the table 'pop_projection'.
 
 <img src="/images/2022-09-04/2sql.JPG" width="912"/>
 
- ### Load DATA :
-
+### Load DATA :
 Data can be entered into a MySQL table in several ways. In my first attempt, I tried using the 'Table Data Import Wizard', however, it takes much longer to load the data than I expected. Furthermore, it can only load a portion of it.
 Therefore, I have used MySQL's 'Load Data' statement.
 
