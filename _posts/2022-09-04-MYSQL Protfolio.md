@@ -148,3 +148,70 @@ vcode INT,
 vtype VARCHAR(100) );
 ```
 
+
+### Load DATA
++ Load data to table ‘accidents_2019’
+```sql
+LOAD DATA LOCAL INFILE ‘dir:\\<path>\\Accidents_2019.csv' 
+INTO TABLE accidents_2019 
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n' 
+IGNORE 1 LINES
+(@col1, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @col2, @dummy, 
+@dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, 
+@dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, 
+@dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy) 
+SET accident_index=@col1, accident_severity=@col2;
+```
++ Load data to table ‘accidents_2019’
+```sql
+LOAD DATA LOCAL INFILE dir:\\<path>\\\\Vehicle_2019.csv' 
+INTO TABLE vehicles_2019 
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n' 
+IGNORE 1 LINES
+(@col1, @dummy, @dummy,@dummy, @col2, @dummy, @dummy, @dummy, @dummy, @dummy, 
+@dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy, 
+@dummy, @dummy, @dummy, @dummy, @dummy, @dummy,@dummy,@dummy) 
+SET accident_index=@col1, vehicle_type=@col2;
+```
++ Load data to table ‘vehicles_type’
+```sql
+LOAD DATA LOCAL INFILE 'dir:\\<path>\\vehicle_type.csv' 
+INTO TABLE vehicles_type 
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n' 
+IGNORE 1 LINES;
+```
+
+### Show Data in TABLES
+```sql
+SELECT * FROM accident.accidents_2019;
+```
+
+```sql
+SELECT * FROM accident.vehicles_2019;
+```
+```sql
+SELECT * FROM accident.vehicles_type;```
+
+### JOIN and QUERY
+Our set target is to show the vehicle type, the average accident severity, and the number of accidents of the vehicle type by join operation in mysql as that data is stored in all three accidents tables.
+The following figure shows the relations of three tables and our desired join activities in a line diagram  
+<img src="/images/2022-09-04/6sql.JPG" width="850"/>
+CODE:
+```sql
+SELECT 
+    v.vtype AS 'Vehicle Type',
+    AVG(a.Accident_Severity) AS 'Average Severity',
+    COUNT(a.Accident_Severity) AS 'Number of Accidents'
+FROM
+    accidents_2019 AS a
+        JOIN
+    vehicles_2019 AS m ON a.Accident_Index = m.Accident_Index
+        JOIN
+    vehicles_type AS v ON m.Vehicle_Type = v.vcode
+WHERE
+    v.vtype LIKE '%otorcycle%'
+GROUP BY v.vtype;
+```
