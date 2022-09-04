@@ -77,4 +77,5 @@ SET GLOBAL local_infile = true;
 - The following connector option should be added to the others window under the Advanced tab:
 
 OPT_LOCAL_INFILE=1
-<img src="/images/2022-09-04/3sql.JPG" width="912"/>
+
+<img src="/images/2022-09-04/3sql.JPG" width="800"/>
