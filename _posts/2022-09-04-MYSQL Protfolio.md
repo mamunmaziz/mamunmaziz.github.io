@@ -121,10 +121,29 @@ Three fields were used from those datasets: accident severity, accident index, a
 
 Using this data, we can determine if there is an association between motorcycle type and accident type. 
 
+###  DATASET
 We have initially two datasets as :
 1.	Accidents_2019.csv
 2.	Vehicle_2019.csv
-
 Another dataset is as 'Road-Accident-Safety-Data-Guide.xls', from which a new dataset can be created as 'vehicle_type.csv'.
 
+### Create SCHEMA and Tables
++ The first step was to create a structure for the data. Thus, we have created a new schema 'accident' and set it to be the default schema.
++ Table: accidents_2019
+```sql
+CREATE TABLE accidents_2019 (
+Accident_Index VARCHAR(13),
+ Accident_Severity INT );
+```
++ Table: vehicles_2019
+```sql
+CREATE TABLE vehicles_2019 (
+Accident_Index VARCHAR(13),
+Vehicle_Type VARCHAR(10) );```
++ Table: vehicles_types
+```sql
+CREATE TABLE vehicles_type (
+vehicle_code INT,
+Vehicle_Type VARCHAR(100) );
+```
 
