@@ -109,5 +109,13 @@ Result:
 <img src="/images/2022-09-04/5sql.JPG" width="500"/>
 
 
+## Example of JOIN datasets under a study course
+------------------------------------------------
+As a starting point, we basically started with two datasets and joined them. Our next step was to perform ETL on them.
+We used road safety data for year 2019 published by the UK government at their open data website, https://ckan.publishing.service.gov.uk/dataset/road-accidents-safety-data
+
+Three fields were used from those datasets: accident severity, accident index, and vehicle type. There is also a file that contains definitions of data types and descriptions of vehicle types. The accident index connects the databases. We can use that link to create a relationship between the datasets. By using the common fields, we have gathered information to determine the median and average accident severity for each type of motorcycle.
+
+Using this data, we can determine if there is an association between motorcycle type and accident type. 
 
 
