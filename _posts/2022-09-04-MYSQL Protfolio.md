@@ -144,7 +144,7 @@ Vehicle_Type VARCHAR(10) );```
 + Table: vehicles_types
 ```sql
 CREATE TABLE vehicles_type (
-vehicle_code INT,
-Vehicle_Type VARCHAR(100) );
+vcode INT,
+vtype VARCHAR(100) );
 ```
 
