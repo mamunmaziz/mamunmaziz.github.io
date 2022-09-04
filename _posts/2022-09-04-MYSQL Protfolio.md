@@ -78,4 +78,19 @@ SET GLOBAL local_infile = true;
 
 OPT_LOCAL_INFILE=1
 
-<img src="/images/2022-09-04/3sql.JPG" width="800"/>
+<img src="/images/2022-09-04/3sql.JPG" width="700"/>
+
+
+Next, 'LOAD DATA LOCAL INFILE...' is being executed . This resulted in 36 million rows of data being loaded into our newly created table.
+
+
+<img src="/images/2022-09-04/4sql.JPG" width="912"/>
+
+The following command displays the loaded data in our created table.
+
+```sql
+SELECT * FROM cal_pop.pop_projection;
+```
+
+
+
