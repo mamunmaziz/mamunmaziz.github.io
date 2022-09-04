@@ -21,7 +21,10 @@ I am very familiar with the open-source relational database management system (R
 - Implemented the necessary procedures and packages for extracting, transforming, and loading data.
 -  Enabled views, stored procedures, and queries in the database
 
+
+
 # Example of creating, loading, searching, and querying  a database under study courses 
+---------------------------------------------------------------------------------------
 In this study a large dataset of “California Population Projection by County, Age, Gender, and Ethnicity” was used.
 
 ### Create a DATABASE:
@@ -33,8 +36,9 @@ The next step is to create a table within our database so that we can store our 
 
  ### Load DATA :
 
-There are many ways to get data into a MySQL table. First I have tried with ‘Table Data Import Wizard’ but as the dataset is more than 23M large, the wizard is taking very long time and can load only a portion od data.
-So, I have used the MYQL’s built in ‘Load Data’ statement as.
+Data can be entered into a MySQL table in several ways. In my first attempt, I tried using the 'Table Data Import Wizard', however, it takes much longer to load the data than I expected. Furthermore, it can only load a portion of it.
+Therefore, I have used MySQL's 'Load Data' statement.
+
 
 ```sql
 LOAD DATA LOCAL INFILE dir:\\<path…>\\CA_DRU_proj_2010-2060.csv'
