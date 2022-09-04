@@ -35,6 +35,20 @@ The next step is to create a table within our database so that we can store our 
 
 <img src="/images/2022-09-04/2sql.JPG" width="912"/>
 
+The same table can be create using mysql command syntex as:
+
+```sql
+CREATE TABLE `ca_pop`.`pop_proj` (
+  `county_code` INT NOT NULL,
+  `county` VARCHAR(45) NULL,
+  `date_year` VARCHAR(4) NULL,
+  `race_code` INT NULL,
+  `race` TEXT NULL,
+  `gender` VARCHAR(6) NULL,
+  `age` INT NULL,
+  `population` INT NULL);
+  ```
+
 ### Load DATA :
 Data can be entered into a MySQL table in several ways. In my first attempt, I tried using the 'Table Data Import Wizard', however, it takes much longer to load the data than I expected. Furthermore, it can only load a portion of it.
 Therefore, I have used MySQL's 'Load Data' statement.
