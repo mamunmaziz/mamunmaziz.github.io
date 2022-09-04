@@ -106,7 +106,7 @@ The following command displays the loaded data in our created table.
 SELECT * FROM cal_pop.pop_projection;
 ```
 Result:
-<img src="/images/2022-09-04/3sql.JPG" width="500"/>
+<img src="/images/2022-09-04/5sql.JPG" width="500"/>
 
 
 
