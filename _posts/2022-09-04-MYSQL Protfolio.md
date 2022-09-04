@@ -219,4 +219,5 @@ GROUP BY v.vtype;
 ```
 ### Query Results
 <img src="/images/2022-09-04/7sql.JPG" width="850"/>
+
 The query gives us a result for the average severity and number of accidents per vehicle type in UK on the year 2019.
