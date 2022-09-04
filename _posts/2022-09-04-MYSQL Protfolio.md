@@ -21,3 +21,25 @@ I am very familiar with the open-source relational database management system (R
 - Implemented the necessary procedures and packages for extracting, transforming, and loading data.
 -  Enabled views, stored procedures, and queries in the database
 
+## Example of creating, loading, searching, and querying  a database under study courses 
+In this study a large dataset of “California Population Projection by County, Age, Gender, and Ethnicity” was used.
+
+### Create a DATABASE:
+We need to create a new schema once the MySQL Workbench is open, and the local server is connected. We'll call it ‘cal_pop’ for our California population data.  After I've entered the name, I'll click Apply. Once the newly created schemas have appeared in the Navigator pane, we can see our new 'cal_pop' database. When I double-clicked it, I saw that there are folders for Tables, Views, and Procedures and Functions, but they are all empty right now.
+
+### Create a table in MySQL
+The next step is to create a table within our database so that we can store our data. The easiest way to create a new table is to right-click on the Tables folder beneath the name of your database and select Create Table. Because we will be storing California population projections, I named the table 'pop_projection'.
+<img src="/images/mages/2022-09-04/2sql.jpg" width="912"/>
+
+ ### Load DATA :
+
+There are many ways to get data into a MySQL table. First I have tried with ‘Table Data Import Wizard’ but as the dataset is more than 23M large, the wizard is taking very long time and can load only a portion od data.
+So, I have used the MYQL’s built in ‘Load Data’ statement as.
+```sql
+LOAD DATA LOCAL INFILE dir:\\<path…>\\CA_DRU_proj_2010-2060.csv'
+INTO TABLE pop_projection
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES;
+```
