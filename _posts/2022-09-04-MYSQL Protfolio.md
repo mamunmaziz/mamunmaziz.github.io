@@ -109,6 +109,10 @@ Result:
 <img src="/images/2022-09-04/5sql.JPG" width="500"/>
 
 
+
+
+
+
 # Example of JOIN datasets under a study course
 ------------------------------------------------
 As a starting point, we basically started with two datasets and joined them. Our next step was to perform ETL on them.
