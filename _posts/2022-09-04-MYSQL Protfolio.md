@@ -98,7 +98,7 @@ OPT_LOCAL_INFILE=1
 Next, 'LOAD DATA LOCAL INFILE...' is being executed . This resulted in 36 million rows of data being loaded into our newly created table.
 
 
-<img src="/images/2022-09-04/4sql.JPG" width="912"/>
+<img src="/images/2022-09-04/4sql.jp.JPG" width="912"/>
 
 The following command displays the loaded data in our created table.
 
