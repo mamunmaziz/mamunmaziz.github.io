@@ -71,6 +71,7 @@ SHOW GLOBAL VARIABLES LIKE 'local_infile';
 SET GLOBAL local_infile = true;
 
 ```
+
 2. Edit the connection settings in MySQL Workbench.
 
 - The following connector option should be added to the others window under the Advanced tab:
