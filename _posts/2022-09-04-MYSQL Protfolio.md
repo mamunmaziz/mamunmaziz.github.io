@@ -51,3 +51,4 @@ IGNORE 1 LINES;
 But, when I use 'LOAD DATA LOCAL INFILE' in mysqlworkbench 8.0, I receive the following error.
 ```sql
 Error Code: 3948. Loading local data is disabled; this must be enabled on both the client and server sizes 0.000 sec.
+```
