@@ -9,7 +9,7 @@ mathjax: "true"
 ---
 
 
-### Introduction 
+## Introduction 
 I am very familiar with the open-source relational database management system (RDBMS), MySQL. The master's in data science course I took included a full course dealing with MySQL. In addition, I have completed a few MYSQL courses on Coursera and Linkdin. Moreover, I used MySQL to query the customers' bills and call details from the switching server while I worked for the Bangladesh Telecommunication (BTCL) Company in Bangladesh.  
 
 ## The Key skills and knowledge applied :
@@ -21,7 +21,7 @@ I am very familiar with the open-source relational database management system (R
 - Implemented the necessary procedures and packages for extracting, transforming, and loading data.
 -  Enabled views, stored procedures, and queries in the database
 
-## Example of creating, loading, searching, and querying  a database under study courses 
+# Example of creating, loading, searching, and querying  a database under study courses 
 In this study a large dataset of “California Population Projection by County, Age, Gender, and Ethnicity” was used.
 
 ### Create a DATABASE:
