@@ -56,7 +56,7 @@ Error Code: 3948. Loading local data is disabled; this must be enabled on both t
 
 1.	With the mysql terminal command:
 -	Logged in first with the usual:
--
+
 ```sql
 mysql -u root -p
 ```
@@ -65,7 +65,7 @@ mysql -u root -p
 SHOW GLOBAL VARIABLES LIKE 'local_infile';
 ```
 -	set the option: local-infile=1, or local_infile=true;
--	
+
 ```sql
 SET GLOBAL local_infile = true;
 
