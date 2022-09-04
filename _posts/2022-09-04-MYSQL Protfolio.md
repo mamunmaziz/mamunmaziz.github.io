@@ -32,7 +32,8 @@ We need to create a new schema once the MySQL Workbench is open, and the local s
 
 ### Create a table in MySQL
 The next step is to create a table within our database so that we can store our data. The easiest way to create a new table is to right-click on the Tables folder beneath the name of your database and select Create Table. Because we will be storing California population projections, I named the table 'pop_projection'.
-<img src="/images/mages/2022-09-04/2sql.jpg" width="912"/>
+
+<img src="/images/mages/2022-09-04/2sql.JPG" width="912"/>
 
  ### Load DATA :
 
