@@ -108,10 +108,9 @@ SELECT * FROM cal_pop.pop_projection;
 Result:
 <img src="/images/2022-09-04/5sql.JPG" width="500"/>
 
-
 <br>
 
-
+<br>
 
 # Example of JOIN datasets under a study course
 ------------------------------------------------
