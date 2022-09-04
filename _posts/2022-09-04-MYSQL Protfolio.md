@@ -54,7 +54,8 @@ Error Code: 3948. Loading local data is disabled; this must be enabled on both t
 ```
 Solution of loading data from local data:
 
-1.With the mysql terminal command:
+1. With the mysql terminal command:
+
 -	Logged in first with the usual:
 
 ```sql
@@ -70,7 +71,7 @@ SHOW GLOBAL VARIABLES LIKE 'local_infile';
 SET GLOBAL local_infile = true;
 
 ```
-2.Edit the connection settings in MySQL Workbench.
+2. Edit the connection settings in MySQL Workbench.
 
 - The following connector option should be added to the others window under the Advanced tab:
 
