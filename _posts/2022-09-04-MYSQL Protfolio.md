@@ -125,6 +125,7 @@ Using this data, we can determine if there is an association between motorcycle 
 We have initially two datasets as :
 1.	Accidents_2019.csv
 2.	Vehicle_2019.csv
+
 Another dataset is as 'Road-Accident-Safety-Data-Guide.xls', from which a new dataset can be created as 'vehicle_type.csv'.
 
 ### Create SCHEMA and Tables
