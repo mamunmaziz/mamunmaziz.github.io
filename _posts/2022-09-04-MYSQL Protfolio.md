@@ -38,7 +38,7 @@ The next step is to create a table within our database so that we can store our 
 The same table can be create using mysql command syntex as:
 
 ```sql
-CREATE TABLE `ca_pop`.`pop_proj` (
+CREATE TABLE `cal_pop`.`pop_projection` (
   `county_code` INT NOT NULL,
   `county` VARCHAR(45) NULL,
   `date_year` VARCHAR(4) NULL,
@@ -105,6 +105,9 @@ The following command displays the loaded data in our created table.
 ```sql
 SELECT * FROM cal_pop.pop_projection;
 ```
+Result:
+<img src="/images/2022-09-04/3sql.JPG" width="500"/>
+
 
 
 
