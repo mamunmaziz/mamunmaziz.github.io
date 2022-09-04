@@ -193,12 +193,14 @@ SELECT * FROM accident.accidents_2019;
 SELECT * FROM accident.vehicles_2019;
 ```
 ```sql
-SELECT * FROM accident.vehicles_type;```
+SELECT * FROM accident.vehicles_type;
+```
 
 ### JOIN and QUERY
 Our set target is to show the vehicle type, the average accident severity, and the number of accidents of the vehicle type by join operation in mysql as that data is stored in all three accidents tables.
 The following figure shows the relations of three tables and our desired join activities in a line diagram  
 <img src="/images/2022-09-04/6sql.JPG" width="850"/>
+
 CODE:
 ```sql
 SELECT 
