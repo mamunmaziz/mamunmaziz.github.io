@@ -23,7 +23,7 @@ I am very familiar with the open-source relational database management system (R
 
 
 
-# Example of creating, loading, and searching a database under study courses 
+# Example of creating, loading, and searching a database under courses study
 ---------------------------------------------------------------------------------------
 In this study a large dataset of “California Population Projection by County, Age, Gender, and Ethnicity” was used.
 
@@ -112,7 +112,7 @@ Result:
 
 <br>
 
-# Example of JOIN datasets under a study course
+# Example of JOIN datasets under a course study
 ------------------------------------------------
 As a starting point, we basically started with two datasets and joined them. Our next step was to perform ETL on them.
 We used road safety data for year 2019 published by the UK government at their open data website, <https://ckan.publishing.service.gov.uk/dataset/road-accidents-safety-data>
