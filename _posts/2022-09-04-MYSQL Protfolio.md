@@ -23,7 +23,7 @@ I am very familiar with the open-source relational database management system (R
 
 
 
-# Example of creating, loading, searching, and querying  a database under study courses 
+# Example of creating, loading, and searching a database under study courses 
 ---------------------------------------------------------------------------------------
 In this study a large dataset of “California Population Projection by County, Age, Gender, and Ethnicity” was used.
 
