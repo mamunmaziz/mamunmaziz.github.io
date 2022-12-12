@@ -66,8 +66,8 @@ group by flight_id
 )
 
 select
-fl.flight_id
-,p.number_of_seats-pu.seat_purchased seats_not_yet_purchased
+f.flight_id
+,p.number_of_seats-pr.seat_purchased seats_not_yet_purchased
 from flights f
 left join planes p
 on p.plane_id=f.plane_id
