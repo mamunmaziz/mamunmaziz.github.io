@@ -60,14 +60,14 @@ Create a query to display the number of unpurchased seats for each flight ID.
 with purchased as (
 select
 flight_id
-,count(flight_id) seat_purchased
+,count(flight_id) seats_purchased
 from purchases
 group by flight_id
 )
 
 select
 f.flight_id
-,p.number_of_seats-pr.seat_purchased seats_not_yet_purchased
+,p.number_of_seats-pr.seats_purchased seats_unpurchased
 from flights f
 left join planes p
 on p.plane_id=f.plane_id
@@ -78,11 +78,11 @@ order by f.flight_id asc;
 
 ## output:
 
-|flight_id| seats_not_yet_purchased    |
-|---------|:--------------------------:|
-|1        |14                          |
-|2        |28                          |
-|3        |37                          |
-|4        |48                          |
-|5        |31                          |
+|flight_id| seats_unpurchased    |
+|---------|:--------------------:|
+|1        |14                    |
+|2        |28                    |
+|3        |37                    |
+|4        |48                    |
+|5        |31                    |
 
