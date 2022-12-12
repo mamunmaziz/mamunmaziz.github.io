@@ -13,30 +13,30 @@ mathjax: "true"
 Create a query to display the number of unpurchased seats for each flight ID.
 
 ## Table provided :
-Table1: flights
-+---------+--------+
+### Table1: flights
+
 |flight_id|plane_id|
-+---------+--------+
+|---------|:------:|
 |1        |12      |
 |2        |15      |
 |3        |13      |
 |4        |14      |
 |5        |16      |
-+---------+--------+
-Table2: planes
-+--------+---------------+
+
+### Table2: planes
+
 |plane_id|number_of_seats|
-+--------+---------------+
+|--------|:-------------:|
 |15      |30             |
 |12      |18             |
 |13      |40             |
 |14      |50             |
 |16      |35             |
-+--------+---------------+
-Table3: purchases
-+---------+-------+
+
+### Table3: purchases
+
 |flight_id|seat_no|
-+---------+-------+
+|---------|:-----:|
 |1        |18     |
 |1        |20     |
 |1        |31     |
@@ -52,7 +52,7 @@ Table3: purchases
 |5        |52     |
 |4        |23     |
 |5        |13     |
-+---------+-------+
+
 
 ## Solution :
 
