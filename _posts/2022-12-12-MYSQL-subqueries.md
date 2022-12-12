@@ -56,7 +56,9 @@ Create a query to display the number of unpurchased seats for each flight ID.
 
 ## Solution :
 -- number of purchases for each flight.
+
 -- (number of unpurchased seat = Total number of seats- Number of seats purchased) 
+
 -- Need to join the plane data onto the flight data to determine the number of seats available, then join  new purchases table to subtract the purchases from the available seats
 
 ```sql
