@@ -13,11 +13,48 @@ mathjax: "true"
 
 In my practise of enhancing my SQL knowledge, I have sorted out a few extremely helpful intermediate and advanced SQL queries  as listed below.
 
-## Problem 01: Write a query to display the comparison result (higher/lower/same) of the average salary of employees in a department to the company’s average salary.
+## Problem 01: 
+Write a query to display the comparison result (higher/lower/same) of the average salary of employees in a department to the company’s average salary.
+
+### Create schema 
+```sql
+CREATE DATABASE IF NOT EXISTS practicesql;
+```
+
+### TABLE STRUCTURE 
+
+```sql
+# salary table
+CREATE TABLE IF NOT EXISTS salary (
+  id int(9) unsigned NOT NULL AUTO_INCREMENT,
+  employee_id int(9) unsigned NOT NULL,
+  amount int(9) unsigned NOT NULL,
+  pay_date date DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO salary (id, employee_id, amount, pay_date)
+VALUES ( 1  , 1 , 9000   , '2022-03-31'), 
+	(2 , 2 , 6000, '2022-03-31'), 
+	(3, 3,10000,'2022-03-31'),  
+	(4,   1 , 7000   , '2022-02-28'), 
+	(5  , 2 , 6000   , '2022-02-28'), 
+	(6  , 3 , 8000   , '2022-02-28'),
+	(7  , 3 , 8500   , '2022-03-31');
+
+# employee table
+CREATE TABLE IF NOT EXISTS employee (
+  `employee_id` varchar(255) NOT NULL,
+  `department_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO employee (employee_id, department_id)
+VALUES ( 1 , 1  ), 
+		(2 , 2 ), 
+		(3 , 2 );
+```
 
 
-
-## Problem :
+## Problem 02 :
 Create a query to display the number of unpurchased seats for each flight ID.
 
 ## Table provided :
