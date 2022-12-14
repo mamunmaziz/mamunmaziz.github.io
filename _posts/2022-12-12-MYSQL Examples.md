@@ -54,14 +54,14 @@ VALUES  (1 , 1 ),
 (3 , 2 );
 ```
 #### salary table
-|id | employee_id | amount | pay_date   |
-|---| ----------- | ------ | ---------- |
-|1  | 1           | 9000   | 2017-03-31 |
-|2  | 2           | 6000   | 2022-03-31 |
-|3  | 3           | 10000  | 2022-03-31 |
-|4  | 1           | 7000   | 2022-02-28 |
-|5  | 2           | 6000   | 2022-02-28 |
-|6  | 3           | 8000   | 2022-02-28 |
+|id |employee_id|amount|pay_date  |
+|---|-----------|------|----------|
+|1  |1          |9000  |2017-03-31|
+|2  |2          |6000  |2022-03-31|
+|3  |3          |10000 |2022-03-31|
+|4  |1          |7000  |2022-02-28|
+|5  |2          |6000  |2022-02-28|
+|6  |3          |8000  |2022-02-28|
 
 #### employee table
 
@@ -72,6 +72,18 @@ VALUES  (1 , 1 ),
 |3          |2            |
 
 
+With the help of the WITH keyword, a temporary table was made utilising the window function, subquestions, and joins.
+
+```sql
+With final_table AS(
+  SELECT  DATE_FORMAT(pay_date, "%Y-%m") AS pay_month, department_id,
+    AVG(amount) OVER(PARTITION BY DATE_FORMAT(pay_date, "%m"), department_id) AS dept_avg,
+    AVG(amount) OVER(PARTITION BY DATE_FORMAT(pay_date, "%m")) AS comp_avg 
+FROM salary 
+JOIN employee USING (employee_id)
+  )
+ SELECT* FROM final_table;
+```
 
 
 ## Problem 02 :
