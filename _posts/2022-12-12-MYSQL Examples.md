@@ -36,8 +36,8 @@ CREATE TABLE IF NOT EXISTS salary (
 
 INSERT INTO salary (id, employee_id, amount, pay_date)
 VALUES ( 1  , 1 , 9000   , '2022-03-31'), 
-	(2 , 2 , 6000, '2022-03-31'), 
-	(3, 3,10000,'2022-03-31'),  
+	(2 ,  2 , 6000   , '2022-03-31'), 
+	(3,   3, 10000   , '2022-03-31'),  
 	(4,   1 , 7000   , '2022-02-28'), 
 	(5  , 2 , 6000   , '2022-02-28'), 
 	(6  , 3 , 8000   , '2022-02-28'),
@@ -49,9 +49,9 @@ CREATE TABLE IF NOT EXISTS employee (
   `department_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 INSERT INTO employee (employee_id, department_id)
-VALUES ( 1 , 1  ), 
-		(2 , 2 ), 
-		(3 , 2 );
+VALUES   (1 , 1 ), 
+		     (2 , 2 ), 
+		     (3 , 2 );
 ```
 #### salary table
 | id  | employee_id | amount | pay_date   |
