@@ -13,7 +13,8 @@ mathjax: "true"
 
 In my practise of enhancing my SQL knowledge, I have sorted out a few extremely helpful intermediate and advanced SQL queries  as listed below.
 
-## Problem 01: 
+## Problem 01:
+
 Write a query to display the comparison result (higher/lower/same) of the average salary of employees in a department to the company’s average salary.
 
 ### Create schema 
@@ -52,6 +53,25 @@ VALUES ( 1 , 1  ),
 		(2 , 2 ), 
 		(3 , 2 );
 ```
+#### salary table
+| id  | employee_id | amount | pay_date   |
+| --- | ----------- | ------ | ---------- |
+| 1   | 1           | 9000   | 2017-03-31 |
+| 2   | 2           | 6000   | 2022-03-31 |
+| 3   | 3           | 10000  | 2022-03-31 |
+| 4   | 1           | 7000   | 2022-02-28 |
+| 5   | 2           | 6000   | 2022-02-28 |
+| 6   | 3           | 8000   | 2022-02-28 |
+
+#### employee table
+
+| employee_id | department_id |
+| ----------- | ------------- |
+| 1           | 1             |
+| 2           | 2             |
+| 3           | 2             |
+
+
 
 
 ## Problem 02 :
