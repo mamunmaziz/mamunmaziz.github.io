@@ -1,5 +1,5 @@
 ---
-title: "MYSQL Portfolio: MySQL subqueries 'With ...AS' example"
+title: "MYSQL Portfolio: Some useful MySQL queries I have run"
 Date: 2022-12-12
 tags: [MYSQL]
 header:
