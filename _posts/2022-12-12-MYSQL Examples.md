@@ -15,7 +15,7 @@ In my practise of enhancing my SQL knowledge, I have sorted out a few extremely 
 
 ## Problem 01:
 
-Write a query to display the comparison result (higher/lower/same) of the average salary of employees in a department to the company’s average salary.
+Write a query to display the comparison result (higher/lower/same) of the average salary of employees in a department to the company’s average salary per month..
 
 ### Create schema 
 ```sql
@@ -65,11 +65,11 @@ VALUES  (1 , 1 ),
 
 #### employee table
 
-| employee_id | department_id |
-| ----------- | ------------- |
-| 1           | 1             |
-| 2           | 2             |
-| 3           | 2             |
+|employee_id|department_id|
+|-----------|-------------|
+|1          |1            |
+|2          |2            |
+|3          |2            |
 
 
 
