@@ -49,9 +49,9 @@ CREATE TABLE IF NOT EXISTS employee (
   `department_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 INSERT INTO employee (employee_id, department_id)
-VALUES   (1 , 1 ), 
-		     (2 , 2 ), 
-		     (3 , 2 );
+VALUES  (1 , 1 ), 
+		    (2 , 2 ), 
+		    (3 , 2 );
 ```
 #### salary table
 | id  | employee_id | amount | pay_date   |
