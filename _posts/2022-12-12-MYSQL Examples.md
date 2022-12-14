@@ -85,7 +85,21 @@ JOIN employee USING (employee_id)
   )
  SELECT* FROM final_table;
 ```
+The outcome of the code above is shown here:
 
+| pay_month | department_id | dept_avg  | comp_avg  |
+| --------- | ------------- | --------- | --------- |
+| 2022-02   | 1             | 7000.0000 | 7000.0000 |
+| 2022-02   | 2             | 7000.0000 | 7000.0000 |
+| 2022-02   | 2             | 7000.0000 | 7000.0000 |
+| 2022-03   | 1             | 9000.0000 | 8375.0000 |
+| 2022-03   | 2             | 8166.6667 | 8375.0000 |
+| 2022-03   | 2             | 8166.6667 | 8375.0000 |
+| 2022-03   | 2             | 8166.6667 | 8375.0000 |
+
+
+
+---
 
 ## Problem 02 :
 Create a query to display the number of unpurchased seats for each flight ID.
