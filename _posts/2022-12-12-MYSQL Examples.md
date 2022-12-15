@@ -13,7 +13,7 @@ mathjax: "true"
 
 In my practise of enhancing my SQL knowledge, I have sorted out a few extremely helpful intermediate and advanced SQL queries  as listed below.
 
-## :large_blue_diamond: :white_circle: Problem 01:
+## :large_blue_diamond: :white_circle: Problem :one::
 
 Write a query to display the comparison result (higher/lower/same) of the average salary of employees in a department to the company’s average salary per month..
 
