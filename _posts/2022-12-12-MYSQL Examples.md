@@ -13,7 +13,7 @@ mathjax: "true"
 
 In my practise of enhancing my SQL knowledge, I have sorted out a few extremely helpful intermediate and advanced SQL queries  as listed below.
 
-## :large_blue_diamond: Problem 01:
+## :large_blue_diamond: :white_circle: Problem 01:
 
 Write a query to display the comparison result (higher/lower/same) of the average salary of employees in a department to the company’s average salary per month..
 
@@ -128,7 +128,7 @@ Now, we can show whether the average salary of employees in a department is high
 
 ---
 
-## Problem 02 :
+## :large_blue_diamond: :white_circle: Problem 02 :
 Create a query to display the number of unpurchased seats for each flight ID.
 
 ## Table provided :
