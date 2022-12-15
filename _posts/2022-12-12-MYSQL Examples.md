@@ -128,7 +128,11 @@ Now, we can show whether the average salary of employees in a department is high
 
 ---
 
-## :large_blue_diamond: :white_circle: Problem 02 :
+
+
+---
+
+## :large_blue_diamond: :white_circle: Problem :two: :
 Create a query to display the number of unpurchased seats for each flight ID.
 
 ## Table provided :
