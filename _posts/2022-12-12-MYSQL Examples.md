@@ -115,7 +115,7 @@ With final_table AS(
         ELSE 'lower' END AS comparison
         FROM final_table;
 ```
-## Result:
+## Output:
 
 Now, we can show whether the average salary of employees in a department is higher, lower, or the same as the average salary of the company:
 
