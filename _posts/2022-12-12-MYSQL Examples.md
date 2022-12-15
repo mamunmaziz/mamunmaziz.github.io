@@ -53,6 +53,13 @@ VALUES  (1 , 1 ),
 (2 , 2 ), 
 (3 , 2 );
 ```
+( NBote:  Explanation of " ENGINE=InnoDB DEFAULT CHARSET=utf8;"
+UTF-8 [Universal Character Set Transformation Format 8-bit] character set
+UTF-8 is a standard code used to convert alphabets and characters into bits that computers can understand, much like ASCII. Almost majority of the characters we employ have already been assigned an 8-bit size value by UTF-8. The most often used character set as of late is this one.
+
+ENGINE=InnoDB
+A database storage engine is called InnoDB. Tables are saved, retrieved, and processed by the database storage engine. Although InnoDB is MySQL's fastest storage engine, effective configuration requires a specialist.
+
 #### salary table
 
 |id |employee_id|amount|pay_date  |
