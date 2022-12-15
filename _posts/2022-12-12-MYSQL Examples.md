@@ -97,7 +97,34 @@ The outcome of the code above is shown here:
 | 2022-03   | 2             | 8166.6667 | 8375.0000 |
 | 2022-03   | 2             | 8166.6667 | 8375.0000 |
 
+All that remains to be done is to select the proper features and provide the proper options for our final presentation. The DISTINCT keyword will be used to remove the duplicate columns from the result set, and the CASE WHEN clause will be used to provide our criteria.
 
+```sql
+With final_table AS(
+      SELECT  DATE_FORMAT(pay_date, "%Y-%m") AS pay_month, department_id,
+        AVG(amount) OVER(PARTITION BY DATE_FORMAT(pay_date, "%m"), department_id) AS dept_avg,
+        AVG(amount) OVER(PARTITION BY DATE_FORMAT(pay_date, "%m")) AS comp_avg 
+    FROM salary 
+    JOIN employee USING (employee_id)
+      )
+      
+     SELECT DISTINCT pay_month, department_id,
+    	CASE 
+    		WHEN dept_avg > comp_avg THEN 'higher'
+            WHEN dept_avg = comp_avg THEN 'same'
+        ELSE 'lower' END AS comparison
+        FROM final_table;
+```
+## Result:
+
+Now, we can show whether the average salary of employees in a department is higher, lower, or the same as the average salary of the company:
+
+| pay_month | department_id | comparison |
+| --------- | ------------- | ---------- |
+| 2022-02   | 1             | same       |
+| 2022-02   | 2             | same       |
+| 2022-03   | 1             | higher     |
+| 2022-03   | 2             | lower      |
 
 ---
 
