@@ -22,7 +22,7 @@ Write a query to display the comparison result (higher/lower/same) of the averag
 CREATE DATABASE IF NOT EXISTS practicesql;
 ```
 
-### TABLE STRUCTURE 
+### Table structure 
 
 ```sql
 # salary table
@@ -142,47 +142,114 @@ Now, we can show whether the average salary of employees in a department is high
 ## :large_blue_diamond: :white_circle: Problem :two: :
 Create a query to display the number of unpurchased seats for each flight ID.
 
-## Table provided :
+## ### Table structure 
+
+```sql
+
+ # flight table
+    
+    CREATE TABLE IF NOT EXISTS flights(
+      flight_id int(9) unsigned NOT NULL auto_increment,
+      plane_id int(9) unsigned NOT NULL,
+      PRIMARY KEY (flight_id)
+      );
+      
+    INSERT INTO flights (flight_id, plane_id)
+    VALUES  (1, 12), 
+    		(2, 15),
+            (3, 13),
+            (4, 14),
+            (5, 16),
+            (6, 11);
+    
+    # planes table
+    
+    CREATE TABLE IF NOT EXISTS planes(
+      plane_id VARCHAR(255),
+      no_of_seats int(12) unsigned NOT NULL
+       );
+      
+    INSERT INTO planes (plane_id,  no_of_seats)
+    VALUES  (15, 30), 
+    		(12, 25),
+            (13, 50),
+            (14, 50),
+            (16, 55),
+            (11, 45);
+            
+    # purchases table
+    
+    CREATE TABLE IF NOT EXISTS purchases(
+      flight_id VARCHAR(255),
+      seat_no int(9) unsigned NOT NULL
+       );
+      
+    INSERT INTO purchases (flight_id, seat_no)
+    VALUES  (1, 18), 
+    		(1, 20),
+            (1, 12),
+            (1, 21), 
+    		(2, 20),
+            (2, 30),
+            (3, 50),
+            (3, 41),
+            (3, 30),
+            (4, 51),
+            (5, 16),
+            (5, 52),
+            (6, 19),
+            (4, 23),
+            (5, 18),
+            (6, 37),
+            (6, 43);
+     ```
+
+            
 ### Table1: flights
 
-|flight_id|plane_id|
-|---------|:------:|
-|1        |12      |
-|2        |15      |
-|3        |13      |
-|4        |14      |
-|5        |16      |
-|6        |11      |
+| flight_id | plane_id |
+| --------- | -------- |
+| 1         | 12       |
+| 2         | 15       |
+| 3         | 13       |
+| 4         | 14       |
+| 5         | 16       |
+| 6         | 11       |
+
 
 ### Table2: planes
 
-|plane_id|number_of_seats|
-|--------|:-------------:|
-|15      |30             |
-|12      |18             |
-|13      |40             |
-|14      |50             |
-|16      |35             |
+| plane_id | no_of_seats |
+| -------- | ----------- |
+| 15       | 30          |
+| 12       | 25          |
+| 13       | 50          |
+| 14       | 50          |
+| 16       | 55          |
+| 11       | 45          |
+
 
 ### Table3: purchases
 
-|flight_id|seat_no|
-|---------|:-----:|
-|1        |18     |
-|1        |20     |
-|1        |31     |
-|1        |12     |
-|2        |40     |
-|2        |50     |
-|3        |50     |
-|3        |40     |
-|3        |41     |
-|4        |50     |
-|5        |51     |
-|5        |50     |
-|5        |52     |
-|4        |23     |
-|5        |13     |
+| flight_id | seat_no |
+| --------- | ------- |
+| 1         | 18      |
+| 1         | 20      |
+| 1         | 12      |
+| 1         | 21      |
+| 2         | 20      |
+| 2         | 30      |
+| 3         | 50      |
+| 3         | 41      |
+| 3         | 30      |
+| 4         | 51      |
+| 5         | 16      |
+| 5         | 52      |
+| 6         | 19      |
+| 4         | 23      |
+| 5         | 18      |
+| 6         | 37      |
+| 6         | 43      |
 
 
 ## Solution :
@@ -194,31 +261,124 @@ Create a query to display the number of unpurchased seats for each flight ID.
 
 ```sql
 with purchased as (
-select
-flight_id
-,count(flight_id) seats_purchased
-from purchases
-group by flight_id
-)
+    select
+    flight_id
+    ,count(flight_id) seats_purchased
+    from purchases
+    group by flight_id
+    )
+    
+    select
+    f.flight_id
+    ,p.no_of_seats-pr.seats_purchased seats_unpurchased
+    from flights f
+    left join planes p
+    on p.plane_id=f.plane_id
+    left join purchased pr
+    on pr.flight_id=f.flight_id
+    order by f.flight_id asc;
 
-select
-f.flight_id
-,p.number_of_seats-pr.seats_purchased seats_unpurchased
-from flights f
-left join planes p
-on p.plane_id=f.plane_id
-left join purchased pr
-on pr.flight_id=f.flight_id
-order by f.flight_id asc;
 ```
 
 ## output:
 
-|flight_id| seats_unpurchased    |
-|---------|:--------------------:|
-|1        |14                    |
-|2        |28                    |
-|3        |37                    |
-|4        |48                    |
-|5        |31                    |
+**Schema (MySQL v8.0)**
+
+    
+    
+    # flight table
+    
+    CREATE TABLE IF NOT EXISTS flights(
+      flight_id int(9) unsigned NOT NULL auto_increment,
+      plane_id int(9) unsigned NOT NULL,
+      PRIMARY KEY (flight_id)
+      );
+      
+    INSERT INTO flights (flight_id, plane_id)
+    VALUES  (1, 12), 
+    		(2, 15),
+            (3, 13),
+            (4, 14),
+            (5, 16),
+            (6, 11);
+    
+    # planes table
+    
+    CREATE TABLE IF NOT EXISTS planes(
+      plane_id VARCHAR(255),
+      no_of_seats int(12) unsigned NOT NULL
+       );
+      
+    INSERT INTO planes (plane_id,  no_of_seats)
+    VALUES  (15, 30), 
+    		(12, 25),
+            (13, 50),
+            (14, 50),
+            (16, 55),
+            (11, 45);
+            
+    # purchases table
+    
+    CREATE TABLE IF NOT EXISTS purchases(
+      flight_id VARCHAR(255),
+      seat_no int(9) unsigned NOT NULL
+       );
+      
+    INSERT INTO purchases (flight_id, seat_no)
+    VALUES  (1, 18), 
+    		(1, 20),
+            (1, 12),
+            (1, 21), 
+    		(2, 20),
+            (2, 30),
+            (3, 50),
+            (3, 41),
+            (3, 30),
+            (4, 51),
+            (5, 16),
+            (5, 52),
+            (6, 19),
+            (4, 23),
+            (5, 18),
+            (6, 37),
+            (6, 43);
+            
+      # purchases table
+      
+      
+
+---
+
+**Query #1**
+
+    with purchased as (
+    select
+    flight_id
+    ,count(flight_id) seats_purchased
+    from purchases
+    group by flight_id
+    )
+    
+    select
+    f.flight_id
+    ,p.no_of_seats-pr.seats_purchased seats_unpurchased
+    from flights f
+    left join planes p
+    on p.plane_id=f.plane_id
+    left join purchased pr
+    on pr.flight_id=f.flight_id
+    order by f.flight_id asc;
+
+| flight_id | seats_unpurchased |
+| :-------: | :---------------: |
+| 1         | 21                |
+| 2         | 28                |
+| 3         | 47                |
+| 4         | 48                |
+| 5         | 52                |
+| 6         | 42                |
+
+---
+
+---
 
