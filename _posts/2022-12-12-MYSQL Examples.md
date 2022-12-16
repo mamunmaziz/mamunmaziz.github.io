@@ -202,7 +202,7 @@ Create a query to display the number of unpurchased seats for each flight ID.
             (5, 18),
             (6, 37),
             (6, 43);
-     ```
+```
 
             
 ### Table1: flights
