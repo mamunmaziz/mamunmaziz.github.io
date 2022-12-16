@@ -45,8 +45,8 @@ VALUES ( 1  , 1 , 9000   , '2022-03-31'),
 
 # employee table
 CREATE TABLE IF NOT EXISTS employee (
-  `employee_id` varchar(255) NOT NULL,
-  `department_id` int(11) NOT NULL
+  employee_id varchar(255) NOT NULL,
+  department_id int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 INSERT INTO employee (employee_id, department_id)
 VALUES  (1 , 1 ), 
@@ -152,6 +152,7 @@ Create a query to display the number of unpurchased seats for each flight ID.
 |3        |13      |
 |4        |14      |
 |5        |16      |
+|6        |11      |
 
 ### Table2: planes
 
