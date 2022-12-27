@@ -475,12 +475,13 @@ WHERE student_id != ALL(SELECT student_id FROM table1)
 Create a SQL query to determine the number of users who visited the bank but made no transactions, one transaction, and so on.
 
 ### Create Schema 
+
 ```sql
 CREATE DATABASE IF NOT EXISTS practicesql_4;
 ```
 ### Table structure 
 
-``sql
+```sql
 
 #visits table
     
