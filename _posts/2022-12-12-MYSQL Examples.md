@@ -468,3 +468,81 @@ WHERE student_id != ALL(SELECT student_id FROM table1)
 
 ---
 ---
+
+
+## :large_blue_diamond: :white_circle: Problem :four::
+
+Create a SQL query to determine the number of users who visited the bank but made no transactions, one transaction, and so on.
+
+### Create Schema 
+```sql
+CREATE DATABASE IF NOT EXISTS practicesql_4;
+```
+### Table structure 
+
+``sql
+
+#visits table
+    
+    CREATE TABLE IF NOT EXISTS visits (
+      user_id int(9) NOT NULL,
+      visit_date date NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    
+    INSERT INTO visits (user_id, visit_date)
+    VALUES (1, '2022-01-01'),
+    	(2, '2022-01-02'),
+        (12, '2022-01-01'),
+        (19, '2022-01-03'),
+        (1, '2022-01-02'),
+        (2, '2022-01-03'),
+        (1, '2022-01-04'),
+        (7, '2022-01-11'),
+        (9, '2022-01-25'),
+        (8, '2022-01-28');
+        
+ # transactions table
+    CREATE TABLE IF NOT EXISTS transactions (
+      user_id int(9) NOT NULL,
+      transaction_date date NOT NULL,
+      amount int(11) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    
+    INSERT INTO transactions (user_id, transaction_date, amount)
+    VALUES (1, '2022-01-02', 120),
+    	(2, '2022-01-03', 22),
+        (7, '2022-01-11', 232),
+        (1, '2022-01-04', 7),
+        (9, '2022-01-25', 33),
+        (9, '2022-01-25', 66),
+        (8, '2022-01-28', 1),
+        (9, '2022-01-25', 99);
+```
+
+### Table: visits
+
+| user_id | visit_date |
+| ------- | ---------- |
+| 1       | 2022-01-01 |
+| 2       | 2022-01-02 |
+| 12      | 2022-01-01 |
+| 19      | 2022-01-03 |
+| 1       | 2022-01-02 |
+| 2       | 2022-01-03 |
+| 1       | 2022-01-04 |
+| 7       | 2022-01-11 |
+| 9       | 2022-01-25 |
+| 8       | 2022-01-28 |
+
+### Table: transactions
+
+| user_id | transaction_date | amount |
+| ------- | ---------------- | ------ |
+| 1       | 2022-01-02       | 120    |
+| 2       | 2022-01-03       | 22     |
+| 7       | 2022-01-11       | 232    |
+| 1       | 2022-01-04       | 7      |
+| 9       | 2022-01-25       | 33     |
+| 9       | 2022-01-25       | 66     |
+| 8       | 2022-01-28       | 1      |
+| 9       | 2022-01-25       | 99     |
