@@ -142,7 +142,7 @@ Now, we can show whether the average salary of employees in a department is high
 ## :large_blue_diamond: :white_circle: Problem :two: :
 Create a query to display the number of unpurchased seats for each flight ID.
 
-## ### Table structure 
+### Table structure 
 
 ```sql
 
@@ -321,8 +321,7 @@ USE practicesql_3;
     INSERT INTO student (student_id, student_name)
     VALUES (1, 'Shaila'), (2, 'Raiyan'), (3, 'Annaya'), (4, 'James'), (5, 'Inara'), (6, 'Ruhi'), (7, 'Aayan');
       
-    
-    # exam table
+# exam table
     CREATE TABLE IF NOT EXISTS exam (
       exam_id int(9) NOT NULL,
       student_id int(9) NOT NULL,
@@ -393,8 +392,6 @@ SELECT exam_id, student_id, student_name, score,
 	) 
 	SELECT * FROM table1;
 ```
- 
-
 
 | exam_id | student_id | student_name | score | min_score | max_score |
 | ------- | ---------- | ------------ | ----- | --------- | --------- |
@@ -412,8 +409,8 @@ SELECT exam_id, student_id, student_name, score,
 | 40      | 2          | Raiyan       | 70    | 60        | 80        |
 | 40      | 4          | James        | 80    | 60        | 80        |
 
-The same thing can be done using a WINDOW function as :
-[[
+[[ The same thing can be done using a WINDOW function as :
+
 ```sql
 
 WITH t1 AS(
