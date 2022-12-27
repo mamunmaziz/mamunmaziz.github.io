@@ -19,7 +19,7 @@ Write a query to display the comparison result (higher/lower/same) of the averag
 
 ### Create schema 
 ```sql
-CREATE DATABASE IF NOT EXISTS practicesql;
+CREATE DATABASE IF NOT EXISTS practicesql_1;
 ```
 
 ### Table structure 
@@ -53,9 +53,9 @@ VALUES  (1 , 1 ),
 (2 , 2 ), 
 (3 , 2 );
 ```
-( NBote:  Explanation of " ENGINE=InnoDB DEFAULT CHARSET=utf8;"
+( note:  Explanation of " ENGINE=InnoDB DEFAULT CHARSET=utf8;"
 UTF-8 [Universal Character Set Transformation Format 8-bit] character set
-UTF-8 is a standard code used to convert alphabets and characters into bits that computers can understand, much like ASCII. Almost majority of the characters we employ have already been assigned an 8-bit size value by UTF-8. The most often used character set as of late is this one.
+UTF-8 is a standard code used to convert alphabets and characters into bits that computers can understand, much like ASCII. Almost the majority of the characters we employ have already been assigned an 8-bit size value by UTF-8. The most often used character set as of late is this one.
 
 ENGINE=InnoDB
 A database storage engine is called InnoDB. Tables are saved, retrieved, and processed by the database storage engine. Although InnoDB is MySQL's fastest storage engine, effective configuration requires a specialist.
@@ -295,3 +295,175 @@ with purchased as (
 
 ---
 
+## :large_blue_diamond: :white_circle: Problem :three::
+
+To report the students (student id, student name) being "silent" in ALL tests, use a SQL query. A "silent" student is one who has taken at least one exam but did not receive either a high or bad grade.
+
+### Create schema 
+```sql
+CREATE DATABASE IF NOT EXISTS practicesql_3;
+```
+
+### Changing default schema
+```sql
+USE practicesql_3;
+```
+
+### Table structure 
+
+```sql
+# student table
+     CREATE TABLE IF NOT EXISTS student (
+      student_id int(9) NOT NULL,
+      student_name varchar(255) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    
+    INSERT INTO student (student_id, student_name)
+    VALUES (1, 'Shaila'), (2, 'Raiyan'), (3, 'Annaya'), (4, 'James'), (5, 'Inara'), (6, 'Ruhi'), (7, 'Aayan');
+      
+    
+    # exam table
+    CREATE TABLE IF NOT EXISTS exam (
+      exam_id int(9) NOT NULL,
+      student_id int(9) NOT NULL,
+      score int(11) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    
+    INSERT INTO exam (exam_id, student_id, score)
+    VALUES (10 ,1,70), 
+    	(10 ,2,80), 
+    	(10 ,3,90),
+        (10 ,6,85),
+    (20 ,1,80),
+    (20 ,6,85),
+    (12 ,7,90),
+    (30 ,1,70),
+    (30 ,3,80),
+    (30 ,4,90),
+    (40 ,1,60),
+    (40 ,2,70),
+    (40 ,4,80);
+```
+### Table: student    
+
+| student_id | student_name |
+| ---------- | ------------ |
+| 1          | Shaila       |
+| 2          | Raiyan       |
+| 3          | Annaya       |
+| 4          | James        |
+| 5          | Inara        |
+| 6          | Ruhi         |
+| 7          | Aayan        |
+
+### Table: exam   
+
+| exam_id | student_id | score |
+| ------- | ---------- | ----- |
+| 10      | 1          | 70    |
+| 10      | 2          | 80    |
+| 10      | 3          | 90    |
+| 10      | 6          | 85    |
+| 20      | 1          | 80    |
+| 20      | 6          | 85    |
+| 12      | 7          | 90    |
+| 30      | 1          | 70    |
+| 30      | 3          | 80    |
+| 30      | 4          | 90    |
+| 40      | 1          | 60    |
+| 40      | 2          | 70    |
+| 40      | 4          | 80    |
+
+## Solution :
+-- A student who took at least one exam but didn't receive either a high score or the low score is considered to be "silent".
+-- Returning a student who has never taken an exam is not acceptable.
+-- Return the result table ordered by student_id.
+-- Since there is no interest in kids who don't take tests, we do an inner join.
+
+
+# Create temp table/ intermediary columns
+
+```sql
+WITH table1 AS(
+SELECT exam_id, student_id, student_name, score,
+	MIN(score) OVER(PARTITION BY exam_id) AS min_score,
+	MAX(score) OVER(PARTITION BY exam_id) AS max_score
+	FROM student INNER JOIN exam USING (student_id)
+	ORDER BY exam_id
+	) 
+	SELECT * FROM table1;
+```
+ 
+
+
+| exam_id | student_id | student_name | score | min_score | max_score |
+| ------- | ---------- | ------------ | ----- | --------- | --------- |
+| 10      | 1          | Shaila       | 70    | 70        | 90        |
+| 10      | 2          | Raiyan       | 80    | 70        | 90        |
+| 10      | 3          | Annaya       | 90    | 70        | 90        |
+| 10      | 6          | Ruhi         | 85    | 70        | 90        |
+| 12      | 7          | Aayan        | 90    | 90        | 90        |
+| 20      | 1          | Shaila       | 80    | 80        | 85        |
+| 20      | 6          | Ruhi         | 85    | 80        | 85        |
+| 30      | 1          | Shaila       | 70    | 70        | 90        |
+| 30      | 3          | Annaya       | 80    | 70        | 90        |
+| 30      | 4          | James        | 90    | 70        | 90        |
+| 40      | 1          | Shaila       | 60    | 60        | 80        |
+| 40      | 2          | Raiyan       | 70    | 60        | 80        |
+| 40      | 4          | James        | 80    | 60        | 80        |
+
+The same thing can be done using a WINDOW function as :
+[[
+```sql
+
+WITH t1 AS(
+  SELECT *
+                FROM (
+                       SELECT *,
+                              MIN(score) OVER main_window as least,
+                              MAX(score) OVER main_window as most
+                         FROM exam
+                       WINDOW main_window AS (PARTITION BY exam_id)
+                     ) as a
+              where least = score or most = score
+  )
+  
+  SELECT *
+  FROM t1;
+```
+]]
+
+
+
+## Complete CODE
+```sql
+# Query from nested query
+WITH table1 AS(
+SELECT student_id
+  FROM (
+    SELECT *,
+	MIN(score) OVER(PARTITION BY exam_id) AS min_score,
+	MAX(score) OVER(PARTITION BY exam_id) AS max_score
+	FROM exam
+	ORDER BY exam_id
+	)  as a   # as an alias
+	WHERE min_score = score OR max_score = score 
+)
+
+# Added condition that outputs all the instances where score = min or max scores
+# Need to return a unique result with at least one exam and no high or low score using the DISTINCT function.
+
+SELECT DISTINCT student_id, student_name
+	FROM exam JOIN student
+	USING (student_id)
+
+WHERE student_id != ALL(SELECT student_id FROM table1)
+	ORDER BY 1;
+```
+## Output:
+| student_id | student_name |
+| ---------- | ------------ |
+| 2          | Raiyan       |
+
+---
+---
