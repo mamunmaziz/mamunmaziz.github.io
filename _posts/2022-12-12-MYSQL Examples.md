@@ -588,7 +588,7 @@ SELECT *
 | 2022-01-28 | 8       | 1          | 2022-01-28       | 8       | 1         |
 
 
-From abopve We will select only visit_date column, num_visits column & replace null num_trans by 0.
+From above We will select only visit_date column, num_visits column & replace null num_trans by 0.
 
 ```sql
 SELECT visit_date, 
