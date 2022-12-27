@@ -374,14 +374,14 @@ USE practicesql_3;
 | 40      | 2          | 70    |
 | 40      | 4          | 80    |
 
-## Solution :
+### Solution :
 -- A student who took at least one exam but didn't receive either a high score or the low score is considered to be "silent".
 -- Returning a student who has never taken an exam is not acceptable.
 -- Return the result table ordered by student_id.
 -- Since there is no interest in kids who don't take tests, we do an inner join.
 
 
-# Create temp table/ intermediary columns
+### Create temp table/ intermediary columns
 
 ```sql
 WITH table1 AS(
@@ -435,7 +435,7 @@ WITH t1 AS(
 
 
 
-## Complete CODE
+### Complete CODE
 ```sql
 # Query from nested query
 WITH table1 AS(
@@ -460,7 +460,7 @@ SELECT DISTINCT student_id, student_name
 WHERE student_id != ALL(SELECT student_id FROM table1)
 	ORDER BY 1;
 ```
-## Output:
+### Output:
 | student_id | student_name |
 | ---------- | ------------ |
 | 2          | Raiyan       |
