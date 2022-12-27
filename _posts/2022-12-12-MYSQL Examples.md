@@ -557,7 +557,7 @@ CREATE DATABASE IF NOT EXISTS practicesql_4;
 
 — Perform a left join so that we can keep track of total visitors and gather statistics.
 
-``sql
+```sql
 SELECT * 
     FROM (
     SELECT visit_date, user_id, COUNT(*) as num_visits
@@ -681,6 +681,5 @@ WITH RECURSIVE t1 AS(
 | 2                  | 0            |
 | 3                  | 1            |
 
-                ---
-                
-                ---
+---
+---
