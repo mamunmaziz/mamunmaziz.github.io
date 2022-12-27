@@ -547,3 +547,140 @@ CREATE DATABASE IF NOT EXISTS practicesql_4;
 | 9       | 2022-01-25       | 66     |
 | 8       | 2022-01-28       | 1      |
 | 9       | 2022-01-25       | 99     |
+
+
+## Solution
+
+— Determine the daily visits by user.
+
+— Determine the total number of transactions by user per day.
+
+— Perform a left join so that we can keep track of total visitors and gather statistics.
+
+``sql
+SELECT * 
+    FROM (
+    SELECT visit_date, user_id, COUNT(*) as num_visits
+    FROM visits
+    GROUP BY 1, 2
+    ) AS a
+    LEFT JOIN (
+    SELECT transaction_date, user_id, count(*) as num_trans
+    FROM transactions GROUP BY 1, 2
+    ) AS b
+    on a.user_id = b.user_id;
+ ```
+
+| visit_date | user_id | num_visits | transaction_date | user_id | num_trans |
+| ---------- | ------- | ---------- | ---------------- | ------- | --------- |
+| 2022-01-01 | 1       | 1          | 2022-01-02       | 1       | 1         |
+| 2022-01-01 | 1       | 1          | 2022-01-04       | 1       | 1         |
+| 2022-01-02 | 2       | 1          | 2022-01-03       | 2       | 1         |
+| 2022-01-01 | 12      | 1          |                  |         |           |
+| 2022-01-03 | 19      | 1          |                  |         |           |
+| 2022-01-02 | 1       | 1          | 2022-01-02       | 1       | 1         |
+| 2022-01-02 | 1       | 1          | 2022-01-04       | 1       | 1         |
+| 2022-01-03 | 2       | 1          | 2022-01-03       | 2       | 1         |
+| 2022-01-04 | 1       | 1          | 2022-01-02       | 1       | 1         |
+| 2022-01-04 | 1       | 1          | 2022-01-04       | 1       | 1         |
+| 2022-01-11 | 7       | 1          | 2022-01-11       | 7       | 1         |
+| 2022-01-25 | 9       | 1          | 2022-01-25       | 9       | 3         |
+| 2022-01-28 | 8       | 1          | 2022-01-28       | 8       | 1         |
+
+
+From abopve We will select only visit_date column, num_visits column & replace null num_trans by 0.
+
+```sql
+SELECT visit_date, 
+    	COALESCE(num_visits,0) as num_visits,
+        COALESCE(num_trans,0) as num_trans 
+    FROM (
+    SELECT visit_date, user_id, COUNT(*) as num_visits
+    FROM visits
+    GROUP BY 1, 2
+    ) AS a
+    LEFT JOIN (
+    SELECT transaction_date, user_id, count(*) as num_trans
+    FROM transactions GROUP BY 1, 2
+    ) AS b
+    on a.user_id = b.user_id;
+```
+
+| visit_date | num_visits | num_trans |
+| ---------- | ---------- | --------- |
+| 2022-01-01 | 1          | 1         |
+| 2022-01-01 | 1          | 1         |
+| 2022-01-02 | 1          | 1         |
+| 2022-01-01 | 1          | 0         |
+| 2022-01-03 | 1          | 0         |
+| 2022-01-02 | 1          | 1         |
+| 2022-01-02 | 1          | 1         |
+| 2022-01-03 | 1          | 1         |
+| 2022-01-04 | 1          | 1         |
+| 2022-01-04 | 1          | 1         |
+| 2022-01-11 | 1          | 1         |
+| 2022-01-25 | 1          | 3         |
+| 2022-01-28 | 1          | 1         |
+
+Make the required bins using another query, T2, and convert our previous result into a sub query.
+To properly make t2 function, we must employ the RECURSIVE clause.
+In the end, we JOIN t1 and t2 for desired out put.
+
+[[ Recursive: A recursive SQL common table expression (CTE) is a query that continuously references a previous result until it returns an empty result]]
+
+Make the required bins using another query, T2, and convert our previous result into a sub query.
+To properly make t2 function, we must employ the RECURSIVE clause.
+In the end, we JOIN t1 and t2 for desired out put
+
+### Complte code
+
+```sql
+WITH RECURSIVE t1 AS(
+                        SELECT visit_date,
+                               COALESCE(num_visits,0) as num_visits,
+                               COALESCE(num_trans,0) as num_trans
+                        FROM ((
+                              SELECT visit_date, user_id, COUNT(*) as num_visits
+                              FROM visits
+                              GROUP BY 1, 2) AS a
+                             LEFT JOIN
+                              (
+                               SELECT transaction_date,
+                                     user_id,
+                                     count(*) as num_trans
+                                FROM transactions
+                              GROUP BY 1, 2) AS b
+                             ON a.visit_date = b.transaction_date and a.user_id = b.user_id)
+                          ),
+    
+                  t2 AS (
+                          SELECT MAX(num_trans) as trans
+                            FROM t1
+                          UNION ALL
+                          SELECT trans-1 
+                            FROM t2
+                          WHERE trans >= 1)
+    
+    SELECT trans as transactions_count, 
+           COALESCE(visits_count,0) as visits_count
+      FROM t2 LEFT JOIN (
+                        SELECT num_trans as transactions_count, COALESCE(COUNT(*),0) as visits_count
+                        FROM t1 
+                        GROUP BY 1
+                        ORDER BY 1) AS a
+    ON a.transactions_count = t2.trans
+    ORDER BY 1;
+```                
+### Output
+                
+
+| transactions_count | visits_count |
+| :----------------: | :----------: |
+| 0                  | 4            |
+| 1                  | 5            |
+| 2                  | 0            |
+| 3                  | 1            |
+
+                ---
+                
+                ---
