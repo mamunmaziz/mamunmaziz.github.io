@@ -158,6 +158,7 @@ SELECT
 ```
 
 ### Output
+
 | customer_id | date_visited |
 | ----------- | ------------ |
 | A           | 4            |
@@ -198,6 +199,7 @@ WITH ranked AS(
 ```
 
 ### Output
+
 | customer_id | product_name | order_date |
 | ----------- | ------------ | ---------- |
 | A           | rice         | 2022-01-01 |
@@ -270,7 +272,7 @@ totals AS (
 ### output
 
 | product_name | Maximum_purchased |
-| ------------ | ----------------- |
+| ------------ | :---------------: |
 | pasta        | 8                 |
 
 Pasta was the most frequently ordered item on the menu, with an overall purchase of 8.
