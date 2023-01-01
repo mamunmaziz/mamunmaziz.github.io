@@ -1,5 +1,5 @@
 ---
-title: "MYSQL Portfolio: Some useful MySQL queries I have run"
+title: "MYSQL Portfolio: Some useful MySQL queries I have run (advanced level)"
 Date: 2022-12-12
 tags: [MYSQL]
 header:
