@@ -19,9 +19,10 @@ A variety of SQL techniques were used to solve the problem on MySQL Workbench 8.
 
 ### Schema (MySQL v8.0)
 
-    ```sql
+```sql
     CREATE SCHEMA shumi_kitchen;
-    ```
+```
+
 ### Create Tables 
 
 ```sql
