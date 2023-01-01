@@ -18,4 +18,4 @@ A variety of SQL techniques were used to solve the problem on MySQL Workbench 8.
 
 In my practise of enhancing my SQL knowledge, I have sorted out a few extremely helpful intermediate and advanced SQL queries  as listed below.
 
-## white_circle: Case Study :one:: Shumi's Kitchen
+## :white_circle: Case Study :one:: Shumi's Kitchen
