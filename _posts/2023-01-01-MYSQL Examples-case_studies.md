@@ -10,9 +10,7 @@ mathjax: "true"
 
 Solved on MySQL workbench 8.0 by Mamun Aziz, 27 Dec 2022
 
-Introduction
-{: .alert .alert-gitlab-purple}
-
+# Introduction
 A variety of SQL techniques were used to solve the problem on MySQL Workbench 8.0, including conditional WHERE statements, data aggregation with GROUP BY and ordering with ORDER BY, CASE WHEN statements, string transformations, regular expressions, datetime manipulation, common table expressions (CTE), subqueries and nested queries, complex table joins (Inner, Outer, Left, Right, Lateral - no Cross Joins) and window functions (row_number(), rank(), dense_rank(), lag(), lead()).
 
 
