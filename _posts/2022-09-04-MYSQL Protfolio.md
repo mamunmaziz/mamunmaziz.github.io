@@ -348,7 +348,8 @@ SELECT avg(price) FROM Products WHERE  Brand = 3;
 ### f. Compute the number of Products with a price larger than or equal to $128.
 ```sql
 SELECT count(*) FROM Products WHERE price>=128;
-### g. SELECT the name and price of all Products with a price larger than or equal to $180, and sort first by price (in descending order), and then by name (in ascending order).
+### g. SELECT the name and price of all Products with a price larger than or 
+equal to $180, and sort first by price (in descending order), and then by name (in ascending order).
 ```sql
 SELECT name, price
 FROM Products WHERE  price>=180
@@ -392,7 +393,8 @@ SELECT a.*, b.name FROM Products a, Brands b WHERE a.Brand = b.code;
 ### i. SELECT the product name, price, and Brand name of all the Products.
 
 ```sql
-SELECT a.name, a.price, b.name FROM Products a join Brands b on(a.Brand = b.code);
+SELECT a.name, a.price, b.name 
+FROM Products a join Brands b on(a.Brand = b.code);
 
 -- Or
 SELECT Products.Name, Price, Brands.Name
@@ -415,4 +417,57 @@ Group By b.name
 HAVING AVG(Price) >= 150;
 ```
 
+### l. SELECT the name and price of the cheapest product.
+```sql
+SELECT name, price FROM Products 
+WHERE price = (
+SELECT min(price)
+FROM Products);
+
+-or
+SELECT name,price
+  FROM Products
+  ORDER BY price ASC
+    LIMIT 1;
+``` 
+
+
+| name        | price |
+| ----------- | ----- |
+| Floppy disk | 5     |
+
+
+### m. SELECT the name of each Brand along with the name and price of its most expensive product.
+```sql
+SELECT max_price_mapping.name as manu_name, max_price_mapping.price, Products_with_manu_name.name as product_name
+FROM 
+    (SELECT Brands.Name, MAX(Price) price
+     FROM Products, Brands
+     WHERE Brand = Brands.Code
+     GROUP BY Brands.Name)
+     as max_price_mapping
+   left join
+     (SELECT Products.*, Brands.name manu_name
+      FROM Products join Brands
+      on (Products.Brand = Brands.code))
+      as Products_with_manu_name
+ on
+   (max_price_mapping.name = Products_with_manu_name.manu_name
+    and
+    max_price_mapping.price = Products_with_manu_name.price); 
+
+```
+### n. Update the name of product 8 to "Laser Printer".
+```sql
+update Products
+set name = 'Laser Printer'
+WHERE code=10;
+```
+### o. Apply a 10% discount to all Products with a price larger than or equal to $120.
+```sql
+update Products
+set price = price * 0.9
+WHERE price >= 120; 
+```
+---------------------------------
 
