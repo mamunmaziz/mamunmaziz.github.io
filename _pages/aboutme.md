@@ -36,9 +36,9 @@ I am actively developing my career in analytics and growing my skill set based o
 ### Python Language 
 ### MYSQL, PostgreSQL
 ### Power BI
-### ESXEL PIVOT AND POWER QUERY
+### EXCEL Pivot and Power Query
 
-### Data Science related certifications
+## Data Science related certifications
 ---------------------------------------
 * SAS – James Cook University Academic Specialisation in Advanced Data Science, Issued by SAS
 *	SAS and Hadoop, Issued by SAS
