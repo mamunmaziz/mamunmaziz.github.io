@@ -407,6 +407,7 @@ SELECT avg(a.price), b.name
 FROM Products a join Brands b 
 on a.Brand = b.code
 group by b.name;
+```
 
 ### k. SELECT the names of Brand whose Products have an average price larger than or equal to $150.
 ```sql
@@ -423,7 +424,6 @@ SELECT name, price FROM Products
 WHERE price = (
 SELECT min(price)
 FROM Products);
-
 -or
 SELECT name,price
   FROM Products
