@@ -19,7 +19,7 @@ I am actively developing my career in analytics and growing my skill set based o
 *	Having a basic knowledge of cloud computing ( Azura) and several statistical methods.
 
 
-## Major Certification
+## :page_with_curl: Major Certification
 ----------------------
 ### Master of Data Science
 * Completed in May 2022
@@ -30,7 +30,7 @@ I am actively developing my career in analytics and growing my skill set based o
 ### Bachelor in Electrical and Electronic Engineering
 * Completed in October 2002
 
-## Technical know-how realated to data science
+## :page_with_curl: Technical know-how realated to data science
 -----------------------------------------------
 ### R Language 
 ### Python Language 
