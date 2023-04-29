@@ -390,6 +390,7 @@ SELECT a.*, b.name FROM Products a, Brands b WHERE a.Brand = b.code;
 | 13   | notebook           | 720   | 9     | Dell            |
 
 ### i. SELECT the product name, price, and Brand name of all the Products.
+
 ```sql
 SELECT a.name, a.price, b.name FROM Products a join Brands b on(a.Brand = b.code);
 
