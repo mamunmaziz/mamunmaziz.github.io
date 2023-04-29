@@ -223,5 +223,68 @@ GROUP BY v.vtype;
 The query gives us a result for the average severity and number of accidents per vehicle type in UK on the year 2019.
 
 
-# A data sample and a basic MYSQL query example:
+# :pencil2: A data sample and a basic MYSQL query example:
 ------------------------------------------------
+
+### Create Tables
+```sql 
+CREATE TABLE Brands(
+  Code INTEGER,
+  Name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (Code)   
+);
+
+CREATE TABLE Products (
+  Code INTEGER,
+  Name VARCHAR(255) NOT NULL ,
+  Price DECIMAL NOT NULL ,
+  Brand INTEGER NOT NULL,
+  PRIMARY KEY (Code), 
+  FOREIGN KEY (Brand) REFERENCES Brands(Code)
+) ENGINE=INNODB;
+
+INSERT INTO Brands(Code,Name) VALUES(1,'SONY');
+INSERT INTO Brands(Code,Name) VALUES(2,'Creative Labs');
+INSERT INTO Brands(Code,Name) VALUES(3,'Hewlett-Packard');
+INSERT INTO Brands(Code,Name) VALUES(4,'Iomega');
+INSERT INTO Brands(Code,Name) VALUES(5,'Fujitsu');
+INSERT INTO Brands(Code,Name) VALUES(6,'Winchester');
+INSERT INTO Brands(Code,Name) VALUES(7,'Samsung');
+INSERT INTO Brands(Code,Name) VALUES(8,'LG');
+INSERT INTO Brands(Code,Name) VALUES(9,'Dell');
+
+INSERT INTO Products(Code,Name,Price,Brand) VALUES(1,'Hard drive',240,5);
+INSERT INTO Products(Code,Name,Price,Brand) VALUES(2,'Memory',120,6);
+INSERT INTO Products(Code,Name,Price,Brand) VALUES(3,'ZIP drive',150,4);
+INSERT INTO Products(Code,Name,Price,Brand) VALUES(4,'Floppy disk',5,6);
+INSERT INTO Products(Code,Name,Price,Brand) VALUES(5,'Monitor',240,1);
+INSERT INTO Products(Code,Name,Price,Brand) VALUES(6,'DVD drive',180,2);
+INSERT INTO Products(Code,Name,Price,Brand) VALUES(7,'CD drive',90,2);
+INSERT INTO Products(Code,Name,Price,Brand) VALUES(8,'Printer',270,3);
+INSERT INTO Products(Code,Name,Price,Brand) VALUES(9,'Toner cartridge',66,3);
+INSERT INTO Products(Code,Name,Price,Brand) VALUES(10,'DVD burner',180,2);
+INSERT INTO Products(Code,Name,Price,Brand) VALUES(11,'Curve Monitor',350,7);
+INSERT INTO Products(Code,Name,Price,Brand) VALUES(12,'Flat large Monitor',360,8);
+INSERT INTO Products(Code,Name,Price,Brand) VALUES(13,'notebook',720,9);
+```
+
+
+
+
+---
+
+### Table 1: Brands
+    SELECT *
+    FROM Brands;
+
+| Code | Name                   |
+| ------- | ----------------------|
+| 1        | SONY                    |
+| 2        | Creative Labs      |
+| 3        | Hewlett-Packard |
+| 4        | Iomega                 |
+| 5        | Fujitsu                  |
+| 6        | Winchester          |
+| 7        | Samsung              |
+| 8        | LG                         |
+| 9        | Dell                       |
