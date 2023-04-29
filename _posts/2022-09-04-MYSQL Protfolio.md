@@ -399,5 +399,20 @@ SELECT Products.Name, Price, Brands.Name
    FROM Products INNER JOIN Brands
    ON Products.Brand = Brands.Code;
 ```
+### j. SELECT the average price of each Brand's Products, showing the Brand's name.
+```sql
+SELECT avg(a.price), b.name 
+FROM Products a join Brands b 
+on a.Brand = b.code
+group by b.name;
+
+### k. SELECT the names of Brand whose Products have an average price larger than or equal to $150.
+```sql
+SELECT avg(a.price), b.name 
+FROM Brands b join Products a 
+on b.code = a.Brand
+Group By b.name
+HAVING AVG(Price) >= 150;
+```
 
 
