@@ -354,6 +354,7 @@ SELECT name, price
 FROM Products WHERE  price>=180
 Order By price DESC, name ASC;
 ```
+
 | name               | price |
 | ------------------ | ----- |
 | notebook           | 720   |
@@ -371,6 +372,7 @@ SELECT a.*, b.name FROM Products a join Brands b on(a.Brand = b.code);
 -- or
 SELECT a.*, b.name FROM Products a, Brands b WHERE a.Brand = b.code;
 ```
+
 | Code | Name               | Price | Brand | name            |
 | ---- | ------------------ | ----- | ----- | --------------- |
 | 1    | Hard drive         | 240   | 5     | Fujitsu         |
