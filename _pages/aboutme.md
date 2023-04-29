@@ -5,11 +5,19 @@ header:
   image: "/images/aboutme.jpg"
 ---
 
-* Certified Data Analyst and Data Scientist with freelance experience analyzing commercial and technical data and producing dashboard reports for business strategy and forecasting using Python, SQL, PowerBI, Excel, and R tools. 
-A master of data science degree from James Cook University taught me a lot about data modeling and preparation.
-Based on my interest and study in Data Science, I am currently expanding my statistical skill set and career.
+* Certified Data Analyst and Data Scientist with freelance experience analyzing commercial and technical data and producing dashboard visualisation and reports for business strategy and project management and forecasting using Python, SQL, PowerBI, Excel, and R tools. 
+A master of data science degree from James Cook University taught me a lot regarding data preparation, wrangling, mining, modeling, and analysis.
+I am actively developing my career in analytics and growing my skill set based on my interest in and study of data science.
+* I have successfully completed several projects related to data gathering, database design, diagnosis, development, modelling, predictions, and deployment of data insights for the two-year master's programme.
+*	Experience with SQL for data querying, wrangling, data transformation, and data analysis.
+*	Having comprehensive knowledge of the ELT (Extract, Load, and Transform) process and exploratory data analysis to present abstract and complex information effectively and efficiently to target audiences.
+*	A solid working knowledge of databases and the ability to integrate business methods to develop interactive visualisations.
+*	Strong familiarity with data mining, customer data analysis, data modelling, and data visualisation technologies with  Power BI visualisation tool.
+*	Solid understanding of Microsoft Office  packages.
+*	Clear experience with data analytics using Python, R programming and SAS under master’s projects.
+*	Substantial knowledge of data warehouses and dimensional models
+*	Having a basic knowledge of cloud computing ( Azura) and several statistical methods.
 
-* Expertise in telecom switch and transmission-related database analysis and meaningful representation. Detailed knowledge of and experience with SpatialNET (the visual database of the Australian Telecommunications Network). A proficient user of geographic information systems, network databases, and MapInfo.
 
 ## Major Certification
 ----------------------
@@ -26,8 +34,9 @@ Based on my interest and study in Data Science, I am currently expanding my stat
 -----------------------------------------------
 ### R Language 
 ### Python Language 
-### SQL  
+### MYSQL, PostgreSQL
 ### Power BI
+### ESXEL PIVOT AND POWER QUERY
 
 ### Data Science related certifications
 ---------------------------------------
@@ -37,6 +46,11 @@ Based on my interest and study in Data Science, I am currently expanding my stat
 *	SQL for Data Science, University of California, Davis under coursera.com
 *	Python Data Structures, University of Michigan under coursera.com
 *	Power BI Report Development Crash Course under coursera.com
+*		Microsoft Power BI Desktop for Business Intelligence under udemy.com
+*	Tableau Essential Training (2020.1) under LinkedIn
+*	Tableau 10: Mastering Calculations under LinkedIn
+*	Microsoft Excel Advanced, Issued by  Odyssey Training
+
 
 
 
