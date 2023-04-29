@@ -326,11 +326,50 @@ WHERE price <= 199;
 ### b. SELECT all the Products with a price between $60 and $120.
 ```sql
 SELECT * FROM Products WHERE price between 60 and 120;
+--or
 SELECT * FROM Products WHERE price >= 60 and price <= 120;
 ```
 ### c. SELECT the name and price in cents (i.e., the price must be multiplied by 100).
 ```sql
 SELECT Name, Price*100 as Coin FROM Products;
----or
+--or
 SELECT name, concat(price*100, ' cents')as Coin FROM Products;
 ```
+### d. Compute the average price of all the Products.
+```sql
+SELECT avg(price) FROM Products;
+-- or
+SELECT sum(price)/count(price) FROM Products;
+```
+### e. Compute the average price of all Products with Brand code equal to 3.
+```sql
+SELECT avg(price) FROM Products WHERE  Brand = 3;
+```
+### f. Compute the number of Products with a price larger than or equal to $128.
+```sql
+SELECT count(*) FROM Products WHERE price>=128;
+### g. SELECT the name and price of all Products with a price larger than or equal to $180, and sort first by price (in descending order), and then by name (in ascending order).
+```sql
+SELECT name, price
+FROM Products WHERE  price>=180
+Order By price DESC, name ASC;
+```
+| name               | price |
+| ------------------ | ----- |
+| notebook           | 720   |
+| Flat large Monitor | 360   |
+| Curve Monitor      | 350   |
+| Printer            | 270   |
+| Hard drive         | 240   |
+| Monitor            | 240   |
+| DVD burner         | 180   |
+| DVD drive          | 180   |
+
+### h. SELECT all the data FROM the Products, including all the data for each product's Brand.
+```sql
+SELECT a.*, b.name FROM Products a join Brands b on(a.Brand = b.code);
+-- or
+SELECT a.*, b.name FROM Products a, Brands b WHERE a.Brand = b.code;
+```
+
+
