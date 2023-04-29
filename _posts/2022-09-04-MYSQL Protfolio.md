@@ -318,7 +318,7 @@ SELECT *
 | 13   | notebook           | 720   | 9     |
 
 
-### a.SELECT the name of the Products with a price less than or equal to $199.
+### a. SELECT the name of the Products with a price less than or equal to $199.
 ```sql
 SELECT Name FROM Products 
 WHERE price <= 199;
@@ -331,4 +331,6 @@ SELECT * FROM Products WHERE price >= 60 and price <= 120;
 ### c. SELECT the name and price in cents (i.e., the price must be multiplied by 100).
 ```sql
 SELECT Name, Price*100 as Coin FROM Products;
+---or
+SELECT name, concat(price*100, ' cents')as Coin FROM Products;
 ```
