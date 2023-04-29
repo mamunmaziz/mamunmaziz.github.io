@@ -371,5 +371,30 @@ SELECT a.*, b.name FROM Products a join Brands b on(a.Brand = b.code);
 -- or
 SELECT a.*, b.name FROM Products a, Brands b WHERE a.Brand = b.code;
 ```
+| Code | Name               | Price | Brand | name            |
+| ---- | ------------------ | ----- | ----- | --------------- |
+| 1    | Hard drive         | 240   | 5     | Fujitsu         |
+| 2    | Memory             | 120   | 6     | Winchester      |
+| 3    | ZIP drive          | 150   | 4     | Iomega          |
+| 4    | Floppy disk        | 5     | 6     | Winchester      |
+| 5    | Monitor            | 240   | 1     | SONY            |
+| 6    | DVD drive          | 180   | 2     | Creative Labs   |
+| 7    | CD drive           | 90    | 2     | Creative Labs   |
+| 8    | Printer            | 270   | 3     | Hewlett-Packard |
+| 9    | Toner cartridge    | 66    | 3     | Hewlett-Packard |
+| 10   | DVD burner         | 180   | 2     | Creative Labs   |
+| 11   | Curve Monitor      | 350   | 7     | Samsung         |
+| 12   | Flat large Monitor | 360   | 8     | LG              |
+| 13   | notebook           | 720   | 9     | Dell            |
+
+### i. SELECT the product name, price, and Brand name of all the Products.
+```sql
+SELECT a.name, a.price, b.name FROM Products a join Brands b on(a.Brand = b.code);
+
+-- Or
+SELECT Products.Name, Price, Brands.Name
+   FROM Products INNER JOIN Brands
+   ON Products.Brand = Brands.Code;
+```
 
 
