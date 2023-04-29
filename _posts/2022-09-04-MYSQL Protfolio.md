@@ -316,3 +316,18 @@ SELECT *
 | 11   | Curve Monitor      | 350   | 7     |
 | 12   | Flat large Monitor | 360   | 8     |
 | 13   | notebook           | 720   | 9     |
+
+
+### a.SELECT the name of the Products with a price less than or equal to $199.
+```sql
+SELECT Name FROM Products 
+WHERE price <= 199;
+```
+
+
+### b. SELECT all the Products with a price between $60 and $120.
+SELECT * FROM Products WHERE price between 60 and 120;
+SELECT * FROM Products WHERE price >= 60 and price <= 120;
+
+### c. SELECT the name and price in cents (i.e., the price must be multiplied by 100).
+SELECT Name, Price*100 as Coin FROM Products;
