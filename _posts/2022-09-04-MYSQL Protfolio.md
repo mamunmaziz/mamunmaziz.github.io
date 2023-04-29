@@ -224,3 +224,4 @@ The query gives us a result for the average severity and number of accidents per
 
 
 # A data sample and a basic MYSQL query example:
+------------------------------------------------
