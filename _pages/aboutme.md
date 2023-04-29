@@ -4,7 +4,7 @@ permalink: /about-me/
 header:
   image: "/images/aboutme.jpg"
 ---
-
+:white_square_button:
 * Certified Data Analyst and Data Scientist with freelance experience analyzing commercial and technical data and producing dashboard visualisation and reports for business strategy and project management and forecasting using Python, SQL, PowerBI, Excel, and R tools. 
 A master of data science degree from James Cook University taught me a lot regarding data preparation, wrangling, mining, modeling, and analysis.
 I am actively developing my career in analytics and growing my skill set based on my interest in and study of data science.
@@ -38,7 +38,7 @@ I am actively developing my career in analytics and growing my skill set based o
 ### Power BI
 ### EXCEL Pivot and Power Query
 
-## Data Science related certifications
+## :page_with_curl: Data Science related certifications
 ---------------------------------------
 * SAS – James Cook University Academic Specialisation in Advanced Data Science, Issued by SAS
 *	SAS and Hadoop, Issued by SAS
