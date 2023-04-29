@@ -274,10 +274,11 @@ INSERT INTO Products(Code,Name,Price,Brand) VALUES(13,'notebook',720,9);
 ---
 
 ### Table 1: Brands
-   ```sql
+
+```sql
    SELECT *
-    FROM Brands;
-    ```
+    FROM Brands; 
+ ```
 
 | Code | Name            |
 | ---- | --------------- |
